@@ -1,0 +1,26 @@
+@import "variables";
+
+/**
+ * Header component CSS
+ */
+
+.header {
+    padding: $size-large 0;
+    background: $color-raccoon;
+    color: $color-white;
+}
+
+.header__container {
+    margin: 0 auto;
+    width: $container-size-medium;
+}
+
+.header__logo {
+    margin-right: $grid-desktop-gutter;
+    padding: $size-medium;
+    width: $grid-desktop-col;
+
+    & > img {
+        margin-bottom: 0;
+    }
+}
