@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "raccoon-studio-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Raccoon Studio Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Damien Senger <damien@raccoon.studio>",
   "dependencies": {
     "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.30",
