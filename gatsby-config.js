@@ -67,5 +67,27 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     "gatsby-plugin-offline",
     "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            subsets: [`latin`, `latin-ext`],
+            variants: [
+              `100`,
+              `200`,
+              `300`,
+              `400`,
+              `500`,
+              `600`,
+              `700`,
+              `800`,
+              `900`,
+            ],
+          },
+        ],
+      },
+    },
   ],
 }
