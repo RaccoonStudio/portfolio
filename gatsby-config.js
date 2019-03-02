@@ -5,24 +5,38 @@ module.exports = {
     author: `@iamhiwelo`,
     mainNavigation: [
       {
-        label: 'About me',
-        link: '/',
+        label: "About me",
+        link: "/",
       },
       {
-        label: 'Projects',
-        link: '/projects',
+        label: "Projects",
+        link: "/projects",
       },
       {
-        label: 'Workshops',
-        link: '/workshops',
+        label: "Workshops",
+        link: "/workshops",
       },
       {
-        label: 'Talks',
-        link: '/talks',
+        label: "Talks",
+        link: "/talks",
       },
       {
-        label: 'Blog',
-        link: '/blog',
+        label: "Blog",
+        link: "/blog",
+      },
+    ],
+    heroSalutations: [
+      {
+        content: "Hi!",
+        lang: "en",
+      },
+      {
+        content: "Hej!",
+        lang: "sv",
+      },
+      {
+        content: "Bonjour !",
+        lang: "fr",
       },
     ],
   },
@@ -51,7 +65,7 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    'gatsby-plugin-offline',
-    'gatsby-plugin-sass',
+    "gatsby-plugin-offline",
+    "gatsby-plugin-sass",
   ],
 }

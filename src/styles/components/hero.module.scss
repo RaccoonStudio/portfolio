@@ -1,0 +1,52 @@
+@import "../variables";
+@import "../container";
+
+/**
+ * Hero component CSS
+ */
+
+.hero {
+  position: relative;
+  color: $color-raccoon;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: $hero-minheight-desktop;
+    content: "";
+    background: $color-raccoon;
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+    z-index: 0;
+  }
+
+  &__container {
+    @extend .container;
+    padding: $size-extra 0 $size-extra * 2;
+  }
+
+  &__salutations {
+    display: block;
+    margin-bottom: $size-medium;
+    color: $color-gray-400;
+    font-size: $font-size-hero-intro;
+    font-weight: 100;
+
+    & > span:not(:last-child) {
+      padding-right: 0.25em;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    width: $grid-cols-4;
+    background-color: $color-raccoon;
+    color: $color-white;
+    font-size: $font-size-hero-title;
+    font-weight: 300;
+    line-height: 1.3;
+    z-index: 1;
+  }
+}
