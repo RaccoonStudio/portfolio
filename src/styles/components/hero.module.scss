@@ -15,11 +15,17 @@
     left: 0;
     right: 0;
     display: block;
-    height: $hero-minheight-desktop;
+    height: 100%;
     content: "";
     background: $color-raccoon;
-    clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
+    transition: clip-path 1s ease-in-out, height 1s ease-in-out;
     z-index: 0;
+
+    @media (min-width: $media-desktop) {
+      height: $hero-minheight-desktop;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    }
   }
 
   &__container {
