@@ -1,0 +1,64 @@
+@import "../variables";
+
+/**
+ * Header component CSS
+ */
+
+.header {
+    padding: $size-large 0;
+    background: $color-raccoon;
+    color: $color-white;
+}
+
+.header__container {
+    display: flex;
+    margin: 0 auto;
+    width: $container-size-medium;
+}
+
+.header__logo {
+    margin-right: $grid-desktop-gutter;
+    padding: $size-medium;
+    width: $grid-desktop-col;
+
+    & > img {
+        margin-bottom: 0;
+    }
+}
+
+.header__navigation {
+    flex: 1;
+    align-self: center;
+    text-align: right;
+
+    & > a {
+        position: relative;
+        margin-left: $size-extra;
+        color: $color-gray-400;
+        font-size: $font-size-navigation;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color .2s ease-in-out;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &[aria-current],
+        &:focus,
+        &:hover {
+            color: $color-white;
+        }
+
+        &[aria-current]::after {
+            position: absolute;
+                bottom: $size-base * -1; left: 50%;
+            content: '';
+            height: 4px;
+            width: 4px;
+            background: $color-white;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

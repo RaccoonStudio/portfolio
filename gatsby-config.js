@@ -3,6 +3,28 @@ module.exports = {
     title: `Raccoon Studio`,
     description: `Raccoon is Damien Senger's design studio in Rotterdam (Netherlands) specialised in Web accessibility and inclusive design.`,
     author: `@iamhiwelo`,
+    mainNavigation: [
+      {
+        label: 'About me',
+        link: '/',
+      },
+      {
+        label: 'Projects',
+        link: '/projects',
+      },
+      {
+        label: 'Workshops',
+        link: '/workshops',
+      },
+      {
+        label: 'Talks',
+        link: '/talks',
+      },
+      {
+        label: 'Blog',
+        link: '/blog',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
