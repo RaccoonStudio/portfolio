@@ -28,6 +28,13 @@
     }
   }
 
+  @media (prefers-reduced-motion: no-preference) and (min-width: $media-desktop) {
+    header:hover + main > &::before,
+    &:hover::before {
+      clip-path: polygon(0 0, 100% 0, 100% 10%, 0 90%);
+    }
+  }
+
   &__container {
     @extend .container-6cols;
     padding-top: $size-extra;
