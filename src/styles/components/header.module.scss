@@ -13,6 +13,7 @@
 
 .header__container {
   @extend .container-6cols;
+  background: $color-raccoon;
 }
 
 .header__logo {

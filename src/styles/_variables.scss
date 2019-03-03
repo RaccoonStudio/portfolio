@@ -1,7 +1,9 @@
-$color-raccoon: #333;
-$color-gray-800: #444;
-$color-gray-600: #888;
-$color-gray-400: #ccc;
+$color-raccoon: #333333;
+$color-gray-800: #444444;
+$color-gray-600: #888888;
+$color-gray-400: #cccccc;
+$color-gray-100: #f5f5f5;
+$color-gray-50: #fafafa;
 
 $color-black: #000;
 $color-white: #fff;
@@ -30,9 +32,9 @@ $grid-cols-6: ($grid-desktop-unit * 6) - $grid-desktop-gutter;
 $grid-cols-7: ($grid-desktop-unit * 7) - $grid-desktop-gutter;
 $grid-cols-8: ($grid-desktop-unit * $grid-cols-count) - $grid-desktop-gutter;
 
-$hero-minheight-desktop: 165%;
+$hero-minheight-desktop: 720px; /* previously 165% */
 
-$media-desktop: 1140px;
+$media-desktop: 1280px;
 
 $size-unit: 0.1rem;
 $size-double: 0.2rem;

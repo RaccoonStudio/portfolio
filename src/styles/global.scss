@@ -25,11 +25,26 @@ html {
 
 body {
   margin: 0;
+  background-color: $color-gray-100;
   box-sizing: border-box;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-size: 16px; /* px fallback */
   font-size: 1.6rem;
   line-height: 1.5;
+  z-index: -5;
+
+  &::after {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: $media-desktop;
+    display: block;
+    content: "";
+    background: $color-gray-50;
+    transform: translateX(-50%);
+    z-index: -4;
+  }
 }
 
 * {

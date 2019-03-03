@@ -2,6 +2,8 @@
   display: flex;
   margin: 0 auto;
   width: $container-size-desktop;
+  background: $color-gray-50;
+  z-index: -3;
 }
 
 .container-6cols {

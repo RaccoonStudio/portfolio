@@ -20,7 +20,7 @@
     background: $color-raccoon;
     clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
     transition: clip-path 1s ease-in-out, height 1s ease-in-out;
-    z-index: 0;
+    z-index: 1;
 
     @media (min-width: $media-desktop) {
       height: $hero-minheight-desktop;
@@ -28,17 +28,21 @@
     }
   }
 
-  @media (prefers-reduced-motion: no-preference) and (min-width: $media-desktop) {
-    header:hover + main > &::before,
-    &:hover::before {
-      clip-path: polygon(0 0, 100% 0, 100% 10%, 0 90%);
-    }
-  }
+  // @media (prefers-reduced-motion: no-preference) and (min-width: $media-desktop) {
+  //   header:hover + main > &::before,
+  //   &:hover::before {
+  //     clip-path: polygon(0 0, 100% 0, 100% 10%, 0 90%);
+  //   }
+  // }
 
   &__container {
     @extend .container-6cols;
-    padding-top: $size-extra;
     padding-bottom: $size-extra * 2;
+    padding-top: $size-extra;
+
+    @media (min-width: $media-desktop) {
+      padding-bottom: 0;
+    }
   }
 
   &__salutations {
@@ -65,6 +69,37 @@
 
     & > strong {
       font-weight: 500;
+    }
+  }
+}
+
+.heroImage {
+  margin-top: $size-extra * -2;
+
+  & [class=" gatsby-image-wrapper"],
+  & img {
+    display: block !important;
+    max-width: 100%;
+
+    @media (min-width: $media-desktop) {
+      max-width: 130%;
+    }
+  }
+
+  & img {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $media-desktop) {
+    margin-bottom: $size-extra * -3;
+    margin-left: 50%;
+    margin-top: 0;
+    width: 50%;
+    // clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    overflow: hidden;
+
+    @supports (clip-path: polygon(0 50%, 100% 0, 100% 100%)) {
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
     }
   }
 }
