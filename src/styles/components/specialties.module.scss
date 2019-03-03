@@ -1,5 +1,6 @@
 @import "../variables";
 @import "../container";
+@import "../titles";
 
 /**
  * Specialties component CSS
@@ -7,52 +8,35 @@
 
 .specialties {
   @extend .container-6cols;
-  align-items: flex-end;
   padding-top: $size-extra;
   padding-bottom: $size-extra;
 
-  &__item {
-    position: relative;
-    color: $color-raccoon;
-    font-size: $font-size-subtitle;
+  @media (min-width: $media-desktop) {
+    padding-top: 0;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: $size-medium;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $media-desktop) {
+      display: block;
     }
 
-    & a {
-      color: inherit;
-      font-weight: 600;
-      text-decoration: underline;
-      transition: color 0.2s ease-in-out;
+    & > p {
+      margin: 0;
+      margin-bottom: $size-large;
+      padding: 0 $grid-desktop-gutter / 2;
+      width: 50%;
 
-      &:focus,
-      &:hover {
-        color: $color-black;
+      @media (min-width: $media-desktop) {
+        margin-bottom: 1.5em;
+        width: $grid-cols-4;
+
+        &:first-child {
+          margin-top: $size-base;
+        }
       }
-    }
-
-    & strong {
-      font-weight: 600;
-    }
-  }
-
-  &__list {
-    flex: 1;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &__title {
-    margin: 0 $grid-desktop-gutter 0 0;
-    width: $grid-cols-2;
-    font-size: $font-size-oversized;
-    font-weight: 100;
-    line-height: 1.15;
-
-    &::after {
-      content: "…";
     }
   }
 }
