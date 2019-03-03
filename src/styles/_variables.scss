@@ -1,13 +1,20 @@
 $color-raccoon: #333;
+$color-gray-800: #444;
+$color-gray-600: #888;
 $color-gray-400: #ccc;
+
+$color-black: #000;
 $color-white: #fff;
 
 $container-size-desktop: 1280px;
 
 $font-size-default: 1.6rem;
 $font-size-navigation: 1.8rem;
+$font-size-subtitle: 2.4rem;
+$font-size-title: 3.2rem;
+$font-size-oversized: 4rem;
 $font-size-hero-intro: 4.8rem;
-$font-size-hero-title: 4rem;
+$font-size-hero-title: $font-size-oversized;
 
 $grid-desktop-col: 120px;
 $grid-desktop-gutter: 40px;
@@ -32,5 +39,10 @@ $size-double: 0.2rem;
 $size-demi: 0.4rem;
 $size-base: 0.8rem;
 $size-medium: 1.6rem;
+$size-medium-large: 2.4rem;
 $size-large: 3.2rem;
+$size-full: 4rem;
+$size-larger: 4.8rem;
+$size-xlarge: 5.6rem;
+$size-xxlarge: 6.4rem;
 $size-extra: 8rem;

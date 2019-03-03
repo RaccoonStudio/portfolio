@@ -1,0 +1,58 @@
+@import "../variables";
+@import "../container";
+
+/**
+ * Specialties component CSS
+ */
+
+.specialties {
+  @extend .container-6cols;
+  align-items: flex-end;
+  padding-top: $size-extra;
+  padding-bottom: $size-extra;
+
+  &__item {
+    position: relative;
+    color: $color-raccoon;
+    font-size: $font-size-subtitle;
+
+    &:not(:last-child) {
+      margin-bottom: $size-medium;
+    }
+
+    & a {
+      color: inherit;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.2s ease-in-out;
+
+      &:focus,
+      &:hover {
+        color: $color-black;
+      }
+    }
+
+    & strong {
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__title {
+    margin: 0 $grid-desktop-gutter 0 0;
+    width: $grid-cols-2;
+    font-size: $font-size-oversized;
+    font-weight: 100;
+    line-height: 1.15;
+
+    &::after {
+      content: "…";
+    }
+  }
+}
