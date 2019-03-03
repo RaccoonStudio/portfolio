@@ -1,5 +1,10 @@
 .container {
   display: flex;
   margin: 0 auto;
-  width: $container-size-medium;
+  width: $container-size-desktop;
+}
+
+.container-6cols {
+  @extend .container;
+  padding: 0 $grid-desktop-unit;
 }

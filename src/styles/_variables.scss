@@ -2,7 +2,7 @@ $color-raccoon: #333;
 $color-gray-400: #ccc;
 $color-white: #fff;
 
-$container-size-medium: 920px;
+$container-size-desktop: 1280px;
 
 $font-size-default: 1.6rem;
 $font-size-navigation: 1.8rem;
@@ -11,8 +11,17 @@ $font-size-hero-title: 4rem;
 
 $grid-desktop-col: 120px;
 $grid-desktop-gutter: 40px;
+$grid-desktop-unit: ($grid-desktop-col + $grid-desktop-gutter);
+$grid-cols-count: 8;
 
-$grid-cols-4: 600px;
+$grid-cols-1: $grid-desktop-col;
+$grid-cols-2: ($grid-desktop-unit * 2) - $grid-desktop-gutter;
+$grid-cols-3: ($grid-desktop-unit * 3) - $grid-desktop-gutter;
+$grid-cols-4: ($grid-desktop-unit * 4) - $grid-desktop-gutter;
+$grid-cols-5: ($grid-desktop-unit * 5) - $grid-desktop-gutter;
+$grid-cols-6: ($grid-desktop-unit * 6) - $grid-desktop-gutter;
+$grid-cols-7: ($grid-desktop-unit * 7) - $grid-desktop-gutter;
+$grid-cols-8: ($grid-desktop-unit * $grid-cols-count) - $grid-desktop-gutter;
 
 $hero-minheight-desktop: 165%;
 

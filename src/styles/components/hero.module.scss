@@ -29,8 +29,9 @@
   }
 
   &__container {
-    @extend .container;
-    padding: $size-extra 0 $size-extra * 2;
+    @extend .container-6cols;
+    padding-top: $size-extra;
+    padding-bottom: $size-extra * 2;
   }
 
   &__salutations {
