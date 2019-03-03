@@ -40,9 +40,12 @@ const Hero = ({ salutations, componentId }) => (
             </h1>
           </div>
         </section>
-        <section className={Styles.heroImage}>
-          <Img fixed={data.file.childImageSharp.fixed} />
-        </section>
+        <div className={Styles.heroImage}>
+          <Img
+            fixed={data.file.childImageSharp.fixed}
+            alt="Face portrait of Damien Senger looking directly at the camera. The person is smiling at the camera while wearing an overall outfit. They is also having blue hair and several piercings."
+          />
+        </div>
       </>
     )}
   />
