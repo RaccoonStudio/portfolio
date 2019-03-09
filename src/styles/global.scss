@@ -58,6 +58,10 @@ body {
 
 main {
   display: block;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 /**
