@@ -1,5 +1,21 @@
 @import "variables";
 
+@mixin outline {
+  &:active,
+  &:focus {
+    outline: $outline-default;
+    outline-offset: $size-demi;
+  }
+}
+
+@mixin outline-inverted {
+  &:active,
+  &:focus {
+    outline: $outline-inverted;
+    outline-offset: $size-demi;
+  }
+}
+
 @mixin sr-only {
   position: absolute;
   height: 1px;
@@ -12,6 +28,8 @@
 }
 
 @mixin sr-only-focusable {
+  @include outline-inverted;
+
   &:active,
   &:focus {
     position: fixed;
@@ -25,7 +43,7 @@
     background: $color-raccoon;
     color: $color-white;
     clip: auto;
-    outline: $outline-inverted;
+    outline-offset: initial;
     overflow: visible;
     transition: none;
     white-space: normal;

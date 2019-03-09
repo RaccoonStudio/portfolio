@@ -1,0 +1,152 @@
+@import "../variables";
+@import "../accessibility";
+
+/**
+ * Header component CSS
+ */
+
+.navigation {
+  & > a {
+    @include outline-inverted;
+    position: relative;
+    color: $color-gray-400;
+    font-size: $font-size-navigation;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  @media (max-width: ($media-laptop - 1)) {
+    &__button:not([aria-expanded]) + & {
+      display: none;
+    }
+
+    &__button[aria-expanded] + & {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: $size-large 0;
+      width: 100%;
+      background: $color-raccoon;
+      z-index: 10;
+
+      @media (min-width: $media-tablet) {
+        flex-direction: row;
+      }
+
+      & > a {
+        margin: $size-base auto;
+        padding: $size-base 0;
+        width: $container-size-tablet;
+        text-align: center;
+
+        &:focus,
+        &:hover {
+          color: $color-white;
+          text-decoration: underline;
+        }
+
+        &[aria-current] {
+          color: $color-white;
+
+          @media (max-width: $media-tablet - 1) {
+            &::after {
+              position: absolute;
+              margin-left: $size-base;
+              content: "•";
+              color: $color-white;
+            }
+          }
+
+          @media (min-width: $media-tablet) {
+            &::after {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              content: "";
+              height: 4px;
+              width: 4px;
+              background: $color-white;
+              border-radius: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $media-laptop) {
+    & {
+      flex: 1;
+      align-self: center;
+      text-align: right;
+    }
+
+    & > a {
+      padding: $size-base $size-medium;
+
+      @media (min-width: $media-desktop) {
+        padding-left: $size-full;
+        padding-right: $size-full;
+      }
+
+      &:focus {
+        background: $color-white;
+        color: $color-raccoon;
+
+        &[aria-current] {
+          color: $color-raccoon;
+        }
+      }
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &[aria-current],
+      &:hover {
+        color: $color-white;
+      }
+
+      &[aria-current]::after {
+        position: absolute;
+        bottom: $size-base * -1;
+        left: 50%;
+        content: "";
+        height: 4px;
+        width: 4px;
+        background: $color-white;
+        border-radius: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__button {
+    @include outline-inverted;
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    padding: $size-base $size-medium;
+    background: $color-raccoon;
+    border: $size-double solid $color-white;
+    color: $color-white;
+    font-size: $font-size-navigation;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &[aria-expanded] {
+      background: $color-white;
+      color: $color-raccoon;
+    }
+
+    @media (min-width: $media-laptop) {
+      display: none;
+    }
+  }
+}

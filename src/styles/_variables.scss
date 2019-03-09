@@ -14,6 +14,7 @@ $color-white: #fff;
 
 $container-size-desktop: 1280px;
 $container-size-laptop: 1024px;
+$container-size-tablet: 85%;
 
 $font-size-default: 1.6rem;
 $font-size-navigation: 1.8rem;
@@ -40,7 +41,8 @@ $grid-cols-8: ($grid-desktop-unit * $grid-cols-count) - $grid-desktop-gutter;
 $hero-minheight-desktop: 720px; /* previously 165% */
 
 $media-desktop: 1280px;
-$media-laptop: 1204px;
+$media-laptop: 1024px;
+$media-tablet: 640px;
 
 $outline-default: 0.2rem dashed $color-raccoon;
 $outline-inverted: 0.2rem dashed $color-white;

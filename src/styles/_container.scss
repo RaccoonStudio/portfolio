@@ -2,9 +2,13 @@
   display: flex;
   margin: 0 auto;
   padding: 0 $grid-desktop-gutter / 2;
-  width: $container-size-laptop;
+  width: $container-size-tablet;
   background: $color-gray-50;
   z-index: -3;
+
+  @media (min-width: $media-laptop) {
+    width: $container-size-laptop;
+  }
 
   @media (min-width: $media-desktop) {
     width: $container-size-desktop;

@@ -22,10 +22,7 @@ const Hero = ({ salutations, componentId }) => (
     `}
     render={data => (
       <>
-        <section
-          className={Styles.hero}
-          // aria-labelledby={componentId + "_title"}
-        >
+        <section className={Styles.hero}>
           <div className={Styles.hero__container}>
             <h1 className={Styles.hero__title}>
               <span className={Styles.hero__salutations}>
