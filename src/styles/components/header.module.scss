@@ -22,9 +22,15 @@
 }
 
 .header__logo {
+  display: flex;
+  align-items: center;
   margin-right: $grid-desktop-gutter;
   padding: $size-medium;
-  width: $grid-desktop-col;
+  width: $size-extra;
+
+  @media (min-width: $media-tablet) {
+    width: $grid-desktop-col;
+  }
 
   & > img {
     height: auto;
