@@ -35,23 +35,30 @@
 
   & > a {
     position: relative;
-    margin-left: $size-large;
+    padding: $size-base $size-medium;
     color: $color-gray-400;
     font-size: $font-size-navigation;
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 
     @media (min-width: $media-desktop) {
-      margin-left: $size-extra;
+      padding-left: $size-full;
+      padding-right: $size-full;
     }
 
-    &:first-child {
-      margin-left: 0;
+    &:focus {
+      background: $color-white;
+      color: $color-raccoon;
+      outline: $outline-inverted;
+      outline-offset: $size-demi;
+
+      &[aria-current] {
+        color: $color-raccoon;
+      }
     }
 
     &[aria-current],
-    &:focus,
     &:hover {
       color: $color-white;
     }
