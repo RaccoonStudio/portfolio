@@ -1,0 +1,33 @@
+@import "variables";
+
+@mixin sr-only {
+  position: absolute;
+  height: 1px;
+  padding: 0;
+  width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin sr-only-focusable {
+  &:active,
+  &:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: auto;
+    margin: $size-demi;
+    padding: $size-base $size-large;
+    width: auto;
+    background: $color-raccoon;
+    color: $color-white;
+    clip: auto;
+    outline: $outline-inverted;
+    overflow: visible;
+    transition: none;
+    white-space: normal;
+  }
+}

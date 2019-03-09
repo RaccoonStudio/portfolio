@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import SkipLinks from "./skip-links"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,16 +29,12 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <SkipLinks />
         <Header
           siteTitle={data.site.siteMetadata.title}
           mainNavigation={data.site.siteMetadata.mainNavigation}
         />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <main id="main">{children}</main>
       </>
     )}
   />

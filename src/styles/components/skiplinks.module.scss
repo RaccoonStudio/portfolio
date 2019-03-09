@@ -1,0 +1,12 @@
+@import "../variables";
+@import "../container";
+@import "../screenreaders";
+
+/**
+ * Header component CSS
+ */
+
+.SkipLinks > a {
+  @include sr-only;
+  @include sr-only-focusable;
+}
