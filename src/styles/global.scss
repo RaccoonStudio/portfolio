@@ -27,6 +27,7 @@ body {
   margin: 0;
   background-color: $color-gray-100;
   box-sizing: border-box;
+  color: $color-raccoon;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-size: 16px; /* px fallback */
   font-size: 1.6rem;
@@ -102,6 +103,16 @@ pre {
 
 a {
   background-color: transparent;
+  color: $color-raccoon;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+
+  &:focus,
+  &:hover {
+    color: $color-raccoon-blue;
+    font-weight: 600;
+  }
 }
 
 /**
@@ -121,7 +132,11 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 500;
+
+  p & {
+    color: $color-gray-900;
+  }
 }
 
 /**

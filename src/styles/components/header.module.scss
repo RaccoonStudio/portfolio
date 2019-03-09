@@ -35,12 +35,16 @@
 
   & > a {
     position: relative;
-    margin-left: $size-extra;
+    margin-left: $size-large;
     color: $color-gray-400;
     font-size: $font-size-navigation;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
+
+    @media (min-width: $media-desktop) {
+      margin-left: $size-extra;
+    }
 
     &:first-child {
       margin-left: 0;

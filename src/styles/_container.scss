@@ -1,9 +1,14 @@
 .container {
   display: flex;
   margin: 0 auto;
-  width: $container-size-desktop;
+  padding: 0 $grid-desktop-gutter / 2;
+  width: $container-size-laptop;
   background: $color-gray-50;
   z-index: -3;
+
+  @media (min-width: $media-desktop) {
+    width: $container-size-desktop;
+  }
 }
 
 .container-6cols {
