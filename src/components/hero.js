@@ -26,8 +26,10 @@ const Hero = ({ salutations, componentId }) => (
           <div className={Styles.hero__container}>
             <h1 className={Styles.hero__title}>
               <span className={Styles.hero__salutations}>
-                {salutations.map(item => (
-                  <span lang={item.lang}>{item.content}</span>
+                {salutations.map((item, index) => (
+                  <span lang={item.lang} key={index}>
+                    {item.content}
+                  </span>
                 ))}
               </span>
               <span id={componentId + "_title"}>

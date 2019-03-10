@@ -18,6 +18,7 @@ let openNavigation = button => {
 let triggerNavigation = e => {
   let button = e.currentTarget
 
+  // eslint-disable-next-line
   switch (button.hasAttribute("aria-expanded")) {
     case true:
       closeNavigation(button)
