@@ -9,7 +9,7 @@ const Introduction = ({ componentId }) => (
     <div className={Styles.introduction__container}>
       <p>
         <strong>I'm a designer</strong> from France <span aria-hidden>🇫🇷</span>{" "}
-        spending my days between Amsterdam and Rotterdam in The Netherlands{" "}
+        spending my life between Amsterdam and Rotterdam in The Netherlands{" "}
         <span aria-hidden>🇳🇱</span>.
       </p>
       <p>
