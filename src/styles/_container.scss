@@ -1,7 +1,7 @@
 .container {
   display: flex;
   margin: 0 auto;
-  padding: 0 $grid-desktop-gutter / 2;
+  padding: 0;
   width: $container-size-tablet;
   background: $color-gray-50;
   z-index: -3;
@@ -17,9 +17,17 @@
 
 .container-6cols {
   @extend .container;
+  z-index: 0;
 
   @media (min-width: $media-desktop) {
     padding-left: $grid-desktop-unit;
     padding-right: $grid-desktop-unit;
   }
+}
+
+.container-alignment {
+  @extend .container;
+  position: relative;
+  display: block;
+  z-index: 0;
 }

@@ -29,8 +29,8 @@ const Introduction = ({ componentId }) => (
         My professional background includes{" "}
         <strong>several years as a web developer</strong>. This is helping me to
         be a <strong>strong bridge</strong> between ideation and implementation
-        and to help and mentor front-end developers to develop the inclusivity
-        of their code.
+        and to help and mentor front-end developers to develop inclusivity
+        through their code.
       </p>
     </div>
   </section>

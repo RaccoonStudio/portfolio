@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Introduction from "../components/introduction"
+import Specialties from "../components/specialties"
 import { graphql } from "gatsby"
 
 const IndexPage = context => (
@@ -22,6 +23,7 @@ const IndexPage = context => (
       heroImage={context.data.heroImage}
     />
     <Introduction />
+    <Specialties />
   </Layout>
 )
 
