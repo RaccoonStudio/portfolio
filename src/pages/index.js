@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
-import Specialties from "../components/specialties"
+import Introduction from "../components/introduction"
 import { StaticQuery, graphql } from "gatsby"
 
 const IndexPage = () => (
@@ -32,7 +32,7 @@ const IndexPage = () => (
           ]}
         />
         <Hero salutations={data.site.siteMetadata.heroSalutations} />
-        <Specialties />
+        <Introduction />
       </Layout>
     )}
   />

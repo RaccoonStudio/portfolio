@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import uuid from "uuid/v1"
 
-import Styles from "../styles/components/specialties.module.scss"
+import Styles from "../styles/components/introduction.module.scss"
 
-const Specialties = ({ componentId }) => (
-  <section className={Styles.specialties} aria-label="Who am I in a nutshell?">
-    <div className={Styles.specialties__container}>
+const Introduction = ({ componentId }) => (
+  <section className={Styles.introduction} aria-label="Who am I in a nutshell?">
+    <div className={Styles.introduction__container}>
       <p>
         <strong>I'm a designer</strong> from France <span aria-hidden>🇫🇷</span>{" "}
         spending my days between Amsterdam and Rotterdam in The Netherlands{" "}
@@ -35,12 +35,12 @@ const Specialties = ({ componentId }) => (
   </section>
 )
 
-Specialties.propTypes = {
+Introduction.propTypes = {
   componentId: PropTypes.string,
 }
 
-Specialties.defaultProps = {
+Introduction.defaultProps = {
   componentId: uuid(),
 }
 
-export default Specialties
+export default Introduction
