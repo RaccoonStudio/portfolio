@@ -17,5 +17,9 @@
 
 .container-6cols {
   @extend .container;
-  padding: 0 $grid-desktop-unit;
+
+  @media (min-width: $media-desktop) {
+    padding-left: $grid-desktop-unit;
+    padding-right: $grid-desktop-unit;
+  }
 }
