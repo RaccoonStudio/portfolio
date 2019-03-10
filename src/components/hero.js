@@ -34,7 +34,7 @@ const Hero = ({ salutations, heroImage, componentId }) => (
 
 Hero.propTypes = {
   salutations: PropTypes.array,
-  heroImage: PropTypes.array,
+  heroImage: PropTypes.object,
   componentId: PropTypes.string,
 }
 
