@@ -92,15 +92,6 @@
         padding-right: $size-full;
       }
 
-      &:focus {
-        background: $color-white;
-        color: $color-raccoon;
-
-        &[aria-current] {
-          color: $color-raccoon;
-        }
-      }
-
       &:focus,
       &:hover {
         text-decoration: underline;
