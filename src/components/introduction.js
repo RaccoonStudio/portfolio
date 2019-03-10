@@ -13,23 +13,24 @@ const Introduction = ({ componentId }) => (
         <span aria-hidden>🇳🇱</span>.
       </p>
       <p>
-        I&nbsp;am working for{" "}
+        I'm <strong>Design System and Accessibility lead</strong> for{" "}
         <a
           href="https://castoredc.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Castor EDC
+          Castor&nbsp;EDC
         </a>{" "}
-        where I <strong>develop the design system</strong> and{" "}
-        <strong>help making the platform more accessible</strong> with a lot of
-        guidelines, training and mentoring.
+        where I collaborate with Product and Engineering teams to bring more{" "}
+        <strong>consistency</strong>, <strong>usability</strong> and{" "}
+        <strong>accessibility</strong> across touchpoints.
       </p>
       <p>
         My professional background includes{" "}
-        <strong>several years as a web developer</strong>. This is allowing me
-        to be a{" "}
-        <strong>strong bridge between Product and Engineering teams</strong>.
+        <strong>several years as a web developer</strong>. This is helping me to
+        be a <strong>strong bridge</strong> between ideation and implementation
+        and to help and mentor front-end developers to develop the inclusivity
+        of their code.
       </p>
     </div>
   </section>

@@ -18,13 +18,20 @@
     height: 100%;
     content: "";
     background: $color-raccoon;
-    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
     transition: clip-path 1s ease-in-out, height 1s ease-in-out;
     z-index: 1;
 
-    @media (min-width: $media-desktop) {
-      height: $hero-minheight-desktop;
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%)) {
+      clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
+    }
+
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%)) {
+      & {
+        @media (min-width: $media-desktop) {
+          height: $hero-minheight-desktop;
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+        }
+      }
     }
   }
 
@@ -89,6 +96,7 @@
 
 .heroImage {
   margin-top: $size-extra * -2;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 
   & [class=" gatsby-image-wrapper"],
   & img {
@@ -98,22 +106,28 @@
     @media (min-width: $media-desktop) {
       max-width: 130%;
     }
+
+    @supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)) {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   & img {
     margin-bottom: 0;
   }
 
-  @media (min-width: $media-desktop) {
-    margin-bottom: $size-extra * -3;
-    margin-left: 50%;
-    margin-top: 0;
-    width: 50%;
-    // clip-path: polygon(0 50%, 100% 0, 100% 100%);
-    overflow: hidden;
-
-    @supports (clip-path: polygon(0 50%, 100% 0, 100% 100%)) {
-      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  @supports (clip-path: polygon(0 50%, 100% 0, 100% 100%)) {
+    @media (min-width: $media-desktop) {
+      & {
+        margin-bottom: $size-extra * -3;
+        margin-left: 50%;
+        margin-top: 0;
+        width: 50%;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        overflow: hidden;
+      }
     }
   }
 }
