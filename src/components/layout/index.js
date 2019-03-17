@@ -9,11 +9,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 // eslint-disable-next-line
-import Icons from "./icons"
+import Icons from "../icons"
 
-import Header from "./header"
-import Footer from "./footer"
-import SkipLinks from "./skip-links"
+import Header from "../header"
+import Footer from "../footer"
+import SkipLinks from "../skip-links"
+
+// eslint-disable-next-line
+import Styles from "./layout.module.scss"
 
 const Layout = ({ children }) => (
   <StaticQuery
