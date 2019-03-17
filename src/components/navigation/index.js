@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Styles from "../styles/components/navigation.module.scss"
+import Styles from "./navigation.module.scss"
 import uuid from "uuid/v1"
 
 let closeNavigation = button => {

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Styles from "../styles/components/hero.module.scss"
+import Styles from "./hero.module.scss"
 import Img from "gatsby-image"
 import uuid from "uuid/v1"
 

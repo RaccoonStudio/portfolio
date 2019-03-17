@@ -2,10 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import uuid from "uuid/v1"
 
-import Styles from "../styles/components/introduction.module.scss"
+import Styles from "./introduction.module.scss"
 
 const Introduction = ({ componentId }) => (
-  <section className={Styles.introduction} aria-label="Who am I in a nutshell?">
+  <section
+    className={Styles.introduction}
+    aria-label="Who am I in a nutshell?"
+    id={componentId}
+  >
     <div className={Styles.introduction__container}>
       <p>
         <strong>I'm a designer</strong> from France <span aria-hidden>🇫🇷</span>{" "}

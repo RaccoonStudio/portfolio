@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+@import "../../styles/container";
+@import "../../styles/accessibility";
+
+/**
+ * Header component CSS
+ */
+
+.SkipLinks > a {
+  @include sr-only;
+  @include sr-only-focusable;
+}

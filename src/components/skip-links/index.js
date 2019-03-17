@@ -1,5 +1,5 @@
 import React from "react"
-import Styles from "../styles/components/skiplinks.module.scss"
+import Styles from "./skiplinks.module.scss"
 
 const skipTo = e => {
   var destination = document.querySelector(

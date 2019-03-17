@@ -3,7 +3,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import uuid from "uuid/v1"
 
-import Styles from "../styles/components/specialties.module.scss"
+import Styles from "./specialties.module.scss"
 
 const Specialties = ({ content, componentId }) => (
   <section className={Styles.specialties} id={componentId}>
