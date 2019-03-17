@@ -7,6 +7,37 @@ import Introduction from "../components/introduction"
 import Specialties from "../components/specialties"
 import { graphql } from "gatsby"
 
+const contentSpecialties = [
+  {
+    title: "Building interfaces with inclusivity\u00AD\u00A0in\u00A0mind",
+    content:
+      "An accessible interface starts with an accessible design. We can work together to make your projects more inclusive.",
+    link: {
+      label: "My portfolio",
+      target: "/projects",
+    },
+  },
+  {
+    title: "Bringing accessibility in your work\u00A0\u0026\u00A0workflow",
+    content:
+      "Accessibility is never a one-time fix. Let me train your product and engineering team to put accessibility at the core of their work.",
+    link: {
+      label: "My workshops",
+      target: "/workshops",
+    },
+  },
+  {
+    title:
+      "Raising awareness on accessibility\u00AD\u00A0\u0026\u00A0inclusivity",
+    content:
+      "I enjoy sharing my knowledge and learning from my peers: I spoke in 15+ events and I am a University guest teacher.",
+    link: {
+      label: "My talks",
+      target: "/talks",
+    },
+  },
+]
+
 const IndexPage = context => (
   <Layout>
     <SEO
@@ -23,7 +54,7 @@ const IndexPage = context => (
       heroImage={context.data.heroImage}
     />
     <Introduction />
-    <Specialties />
+    <Specialties content={contentSpecialties} />
   </Layout>
 )
 
