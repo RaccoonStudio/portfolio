@@ -13,7 +13,7 @@ const Introduction = ({ componentId }) => (
         <span aria-hidden>🇳🇱</span>.
       </p>
       <p>
-        I'm <strong>Design System and Accessibility lead</strong> for{" "}
+        I'm <strong>Design systems and Accessibility lead</strong> for{" "}
         <a
           href="https://castoredc.com"
           target="_blank"
@@ -23,14 +23,14 @@ const Introduction = ({ componentId }) => (
         </a>{" "}
         where I collaborate with Product and Engineering teams to bring more{" "}
         <strong>consistency</strong>, <strong>usability</strong> and{" "}
-        <strong>accessibility</strong> across touchpoints.
+        <strong>accessibility</strong> in our products.
       </p>
       <p>
-        My professional background includes{" "}
+        My background includes{" "}
+        <strong>experiences as UX and UI designer</strong> and{" "}
         <strong>several years as a web developer</strong>. This is helping me to
         be a <strong>strong bridge</strong> between ideation and implementation
-        and to help and mentor front-end developers to develop inclusivity
-        through their code.
+        and to mentor engineers to develop inclusivity through their code.
       </p>
     </div>
   </section>
