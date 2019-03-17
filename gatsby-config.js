@@ -39,6 +39,28 @@ module.exports = {
         lang: "fr",
       },
     ],
+    footerNetworks: [
+      {
+        icon: "twitter",
+        label: "Visit @iamhiwelo on Twitter",
+        target: "https://twitter.com/iamhiwelo",
+      },
+      {
+        icon: "linkedin",
+        label: "Connect with me on Linkedin",
+        target: "https://linkedin.com/in/damiensenger/en",
+      },
+      {
+        icon: "dribbble",
+        label: "Discover my shots on Dribbble",
+        target: "https://dribbble.com/hiwelo",
+      },
+      {
+        icon: "instagram",
+        label: "Take a look at my pictures on Instagram",
+        target: "https://instagram.com/hiwelo",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

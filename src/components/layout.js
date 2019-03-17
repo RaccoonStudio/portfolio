@@ -12,6 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Icons from "./icons"
 
 import Header from "./header"
+import Footer from "./footer"
 import SkipLinks from "./skip-links"
 
 const Layout = ({ children }) => (
@@ -25,6 +26,11 @@ const Layout = ({ children }) => (
               label
               link
             }
+            footerNetworks {
+              icon
+              label
+              target
+            }
           }
         }
       }
@@ -37,6 +43,10 @@ const Layout = ({ children }) => (
           mainNavigation={data.site.siteMetadata.mainNavigation}
         />
         <main id="main">{children}</main>
+        <Footer
+          siteTitle={data.site.siteMetadata.title}
+          networks={data.site.siteMetadata.footerNetworks}
+        />
       </>
     )}
   />

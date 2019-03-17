@@ -22,6 +22,7 @@
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "react-key-handler": "^1.2.0-beta.3",
@@ -40,6 +41,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
+    "start-with-network": "gatsby develop -H $HOSTNAME -p 8000",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },

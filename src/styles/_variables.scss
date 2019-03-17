@@ -3,6 +3,8 @@ $color-gray-900: #161616;
 $color-gray-800: #444444;
 $color-gray-600: #888888;
 $color-gray-400: #cccccc;
+$color-gray-300: #dddddd;
+$color-gray-200: #eeeeee;
 $color-gray-100: #f5f5f5;
 $color-gray-50: #fafafa;
 
@@ -12,10 +14,14 @@ $color-raccoon-turquoise: #3b8686;
 $color-black: #000;
 $color-white: #fff;
 
+$color-inverted: $color-white;
+
 $container-size-desktop: 1280px;
 $container-size-laptop: 1024px;
 $container-size-tablet: 85%;
 
+$font-size-small: 1.2rem;
+$font-size-footer: 1.4rem;
 $font-size-default: 1.6rem;
 $font-size-navigation: 1.8rem;
 $font-size-subtitle: 2.4rem;
@@ -23,6 +29,11 @@ $font-size-title: 3.2rem;
 $font-size-oversized: 4rem;
 $font-size-hero-intro: 4.8rem;
 $font-size-hero-title: $font-size-oversized;
+
+$font-weight-lighter: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 $grid-desktop-col: 120px;
 $grid-desktop-gutter: 40px;
@@ -47,6 +58,7 @@ $media-tablet: 640px;
 $outline-default: 0.2rem dashed $color-raccoon;
 $outline-inverted: 0.2rem dashed $color-white;
 
+$paragraph-footer: 400px;
 $paragraph-max-width: 560px;
 
 $size-unit: 0.1rem;
