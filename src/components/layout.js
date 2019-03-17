@@ -8,6 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+// eslint-disable-next-line
+import Icons from "./icons"
 
 import Header from "./header"
 import SkipLinks from "./skip-links"
