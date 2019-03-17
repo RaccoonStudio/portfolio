@@ -58,6 +58,7 @@ body {
 
 main {
   display: block;
+  overflow: hidden;
 
   &:focus {
     outline: 0;
