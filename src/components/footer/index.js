@@ -31,7 +31,7 @@ const Footer = ({ siteTitle, networks, componentId }) => (
         </ul>
       </div>
       <div className={Styles.footer__storyContainer}>
-        <h6 className={Styles.footer__storyTitle}>Let's discuss together?</h6>
+        <h2 className={Styles.footer__storyTitle}>Let's discuss together?</h2>
         <p className={Styles.footer__story}>
           I love <em>rooibos tea</em>, <em>oat-milk latte</em>,{" "}
           <em lang="sv">kanelbullar</em> and discussing{" "}
