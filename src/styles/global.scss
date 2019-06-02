@@ -115,16 +115,34 @@ pre {
  */
 
 a {
+  position: relative;
   background-color: transparent;
-  color: $color-raccoon;
+  color: $color-raccoon-blue;
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.2s ease-in-out;
+
+  &:not([class])::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $size-unit;
+    content: "";
+    background-color: currentColor;
+    transform: background-color 0.2s ease-in-out;
+  }
 
   &:focus,
   &:hover {
-    color: $color-raccoon-blue;
+    color: $color-raccoon-turquoise;
     font-weight: 600;
+
+    &:not([class])::after {
+      @media (prefers-reduced-motion: reduce) {
+        bottom: $size-double;
+      }
+    }
   }
 
   &:focus {

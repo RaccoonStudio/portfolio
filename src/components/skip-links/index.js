@@ -17,7 +17,7 @@ const skipTo = e => {
 
 const SkipLinks = () => (
   <div className={Styles.SkipLinks}>
-    <a href="#main" onClick={skipTo}>
+    <a className={`${Styles.SkipLinks}__navItem`} href="#main" onClick={skipTo}>
       Skip to content
     </a>
   </div>

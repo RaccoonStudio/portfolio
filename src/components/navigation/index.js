@@ -46,7 +46,7 @@ const Navigation = ({ mainNavigation, componentId }) => (
       id={componentId + "__navigation"}
     >
       {mainNavigation.map((item, index) => (
-        <Link to={item.link} key={index}>
+        <Link className={`${componentId}__navItem`} to={item.link} key={index}>
           {item.label}
         </Link>
       ))}
