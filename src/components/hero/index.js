@@ -16,9 +16,9 @@ const Hero = ({ salutations, heroImage, componentId }) => (
               </span>
             ))}
           </span>
-          <span id={componentId + "_title"}>
-            I am <strong>Damien</strong>, digital <strong>designer</strong> and{" "}
-            <strong>accessibility advocate</strong>.
+          <span id={`${componentId}_title`}>
+            I am <strong>Damien</strong>, digital <strong>designer</strong>{" "}
+            specialised in <strong>accessibility</strong>.
           </span>
         </h1>
       </div>
