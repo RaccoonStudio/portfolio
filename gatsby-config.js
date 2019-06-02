@@ -9,20 +9,12 @@ module.exports = {
         link: "/",
       },
       {
-        label: "Projects",
-        link: "/projects",
-      },
-      {
-        label: "Workshops",
-        link: "/workshops",
-      },
-      {
-        label: "Talks",
-        link: "/talks",
+        label: "Talks & Meetups",
+        link: "https://speaking.raccoon.studio/",
       },
       {
         label: "Blog",
-        link: "/blog",
+        link: "https://medium.com/@iamhiwelo",
       },
     ],
     heroSalutations: [
