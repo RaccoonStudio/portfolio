@@ -43,7 +43,8 @@
     "start": "npm run develop",
     "start-with-network": "gatsby develop -H $HOSTNAME -p 8000",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
