@@ -1,20 +1,10 @@
+@import "../styles/variables";
+@import "../styles/container";
+
 /**
  * Generic template for blog posts
  */
 
 .blogpost {
-  &__article {
-  }
-
-  &__content {
-  }
-
-  &__header {
-  }
-
-  &__infos {
-  }
-
-  &__title {
-  }
+  @extend .container-6cols;
 }

@@ -2,6 +2,7 @@
 path: "/blog/test"
 date: "2019-06-02"
 title: "Test blog post"
+tags: ["test", "blogpost"]
 ---
 
 # This is a test of blog posts
