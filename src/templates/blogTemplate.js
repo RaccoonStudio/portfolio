@@ -2,21 +2,29 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import moment from "moment"
-import { ColorSystem, ContainerSystem, SizingSystem } from "../components/core"
+import Img from "gatsby-image"
+import {
+  ColorSystem,
+  ContainerSystem,
+  SizingSystem,
+  TypographySystem,
+} from "../components/core"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const StyledBlogpost = styled.article`
   ${ContainerSystem.narrow}
   flex-direction: column;
+  margin-bottom: ${SizingSystem.values.full};
 
   @media (min-width: ${SizingSystem.media.desktop}) {
-    padding-top: ${SizingSystem.values.extraLarge};
-    padding-bottom: ${SizingSystem.values.extraLarge};
+    padding-bottom: ${SizingSystem.values.full};
   }
 `
 
-const StyledHeader = styled.header``
+const StyledHeader = styled.header`
+  margin: ${SizingSystem.values.extraLarge} auto;
+`
 
 const StyledPostTitle = styled.h1`
   margin-bottom: 0.3em;
@@ -55,6 +63,64 @@ const StyledPostInfoValue = styled.dd`
   margin-left: ${SizingSystem.values.demi};
 `
 
+const StyledFooter = styled.footer`
+  margin: ${SizingSystem.values.wider} auto ${SizingSystem.values.large};
+  max-width: 32rem;
+  color: ${ColorSystem.gray.g800};
+  font-size: ${TypographySystem.sizes.defaultContent};
+  text-align: center;
+`
+
+const StyledAuthor = styled.strong`
+  display: block;
+  margin: ${SizingSystem.values.base} auto;
+  color: ${ColorSystem.gray.g900};
+  font-weight: ${TypographySystem.weights.bold};
+`
+
+const StyledAuthorAvatar = styled(Img)`
+  display: block;
+  border: ${SizingSystem.values.demi} solid ${ColorSystem.brand.raccoonBlue};
+  border-radius: 50%;
+  box-sizing: content-box;
+`
+
+const StyledBio = styled.p`
+  margin-top: ${SizingSystem.values.base};
+`
+
+const StyledContent = styled.div`
+  margin: 0 auto;
+  max-width: 100%;
+  width: 65ch;
+  color: ${ColorSystem.brand.raccoon};
+  font-size: ${TypographySystem.sizes.blogContent};
+  line-height: ${TypographySystem.lineheight.comfortable};
+
+  & blockquote {
+    margin-left: -1.8rem;
+    padding-left: ${SizingSystem.values.medium};
+    border-left: ${SizingSystem.values.double} solid
+      ${ColorSystem.brand.raccoonTurquoise};
+    color: ${ColorSystem.gray.g900};
+    font-style: italic;
+  }
+
+  & img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  & p {
+    margin-bottom: ${SizingSystem.margins.paragraph};
+  }
+
+  & pre {
+    margin: ${SizingSystem.margins.pre} auto;
+  }
+`
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -75,11 +141,22 @@ export default function Template({
                 children={frontmatter.date}
               />
             </StyledPostInfoValue>
-            <StyledPostInfoLabel children="Writted by" />
+            <StyledPostInfoLabel children="Written by" />
             <StyledPostInfoValue children="Damien Senger" />
           </StyledPostInfos>
         </StyledHeader>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
+        <StyledFooter aria-labelledby="authorName">
+          <StyledAuthorAvatar
+            fixed={data.authorAvatar.childImageSharp.fixed}
+            alt="Face portrait of Damien Senger looking directly at the camera."
+          />
+          <StyledAuthor
+            id="authorName"
+            children={data.site.siteMetadata.blogAuthor}
+          />
+          <StyledBio children={data.site.siteMetadata.blogBio} />
+        </StyledFooter>
       </StyledBlogpost>
     </Layout>
   )
@@ -87,6 +164,12 @@ export default function Template({
 
 export const pageQuery = graphql`
   query($path: String!) {
+    site {
+      siteMetadata {
+        blogAuthor
+        blogBio
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -94,6 +177,13 @@ export const pageQuery = graphql`
         path
         title
         tags
+      }
+    }
+    authorAvatar: file(relativePath: { eq: "damien-avatar-400.jpg" }) {
+      childImageSharp {
+        fixed(width: 160, height: 160) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }

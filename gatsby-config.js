@@ -3,6 +3,8 @@ module.exports = {
     title: `Raccoon Studio`,
     description: `Raccoon is Damien Senger's design studio in Rotterdam (Netherlands) specialised in Web accessibility and inclusive design.`,
     author: `@iamhiwelo`,
+    blogAuthor: `Damien Senger`,
+    blogBio: `I’m a queer designer in Rotterdam specialised in web accessibility fighting every day for a more inclusive web.`,
     mainNavigation: [
       {
         label: "About me",
