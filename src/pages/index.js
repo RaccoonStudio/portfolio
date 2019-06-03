@@ -39,7 +39,7 @@ const contentSpecialties = [
 ]
 
 const IndexPage = context => (
-  <Layout>
+  <Layout mainClass="home">
     <SEO
       title="Web accessibility & Inclusive Design"
       keywords={[

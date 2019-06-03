@@ -4,6 +4,10 @@ import React from "react"
 import Styles from "./navigation.module.scss"
 import uuid from "uuid/v1"
 
+const isExternal = url => {
+  return url.match(/^(?:f|ht)tps?:\/\//i)
+}
+
 let closeNavigation = button => {
   button.removeAttribute("aria-expanded")
 }
@@ -46,9 +50,28 @@ const Navigation = ({ mainNavigation, componentId }) => (
       id={componentId + "__navigation"}
     >
       {mainNavigation.map((item, index) => (
-        <Link className={`${componentId}__navItem`} to={item.link} key={index}>
-          {item.label}
-        </Link>
+        <>
+          {isExternal(item.link) && (
+            <a
+              className={`${componentId}__navItem`}
+              href={item.link}
+              target="_blaink"
+              rel="noopener noreferrer"
+              key={index}
+            >
+              {item.label}
+            </a>
+          )}
+          {!isExternal(item.link) && (
+            <Link
+              className={`${componentId}__navItem`}
+              to={item.link}
+              key={index}
+            >
+              {item.label}
+            </Link>
+          )}
+        </>
       ))}
     </nav>
   </>

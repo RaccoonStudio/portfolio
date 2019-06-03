@@ -8,17 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-// eslint-disable-next-line
-import Icons from "../icons"
-
 import Header from "../header"
 import Footer from "../footer"
 import SkipLinks from "../skip-links"
 
-// eslint-disable-next-line
-import Styles from "./layout.module.scss"
+import "../icons"
+import "./layout.module.scss"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, mainClass }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -45,7 +42,9 @@ const Layout = ({ children }) => (
           siteTitle={data.site.siteMetadata.title}
           mainNavigation={data.site.siteMetadata.mainNavigation}
         />
-        <main id="main">{children}</main>
+        <main id="main" className={mainClass || undefined}>
+          {children}
+        </main>
         <Footer
           siteTitle={data.site.siteMetadata.title}
           networks={data.site.siteMetadata.footerNetworks}
