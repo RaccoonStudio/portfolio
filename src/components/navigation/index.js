@@ -50,14 +50,13 @@ const Navigation = ({ mainNavigation, componentId }) => (
       id={componentId + "__navigation"}
     >
       {mainNavigation.map((item, index) => (
-        <>
+        <React.Fragment key={index}>
           {isExternal(item.link) && (
             <a
               className={`${componentId}__navItem`}
               href={item.link}
               target="_blaink"
               rel="noopener noreferrer"
-              key={index}
             >
               {item.label}
             </a>
@@ -71,7 +70,7 @@ const Navigation = ({ mainNavigation, componentId }) => (
               {item.label}
             </Link>
           )}
-        </>
+        </React.Fragment>
       ))}
     </nav>
   </>

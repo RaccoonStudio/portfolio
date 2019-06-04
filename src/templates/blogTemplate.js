@@ -11,6 +11,7 @@ import {
 } from "../components/core"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageTitle from "../components/PageTitle"
 
 const StyledBlogpost = styled.article`
   ${ContainerSystem.narrow}
@@ -23,24 +24,24 @@ const StyledBlogpost = styled.article`
 `
 
 const StyledHeader = styled.header`
-  margin: ${SizingSystem.values.extraLarge} auto;
-`
+  margin: ${SizingSystem.values.extraLarge} 0;
 
-const StyledPostTitle = styled.h1`
-  margin-bottom: 0.3em;
-
-  @media (min-width: ${SizingSystem.media.desktop}) {
-    font-size: 4.8rem;
-    font-weight: 100;
-    text-align: center;
+  @media (min-width: ${SizingSystem.media.laptop}) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `
 
 const StyledPostInfos = styled.dl`
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: 0;
   color: ${ColorSystem.gray.g800};
+
+  @media (min-width: ${SizingSystem.media.laptop}) {
+    justify-content: center;
+  }
 
   @media (min-width: ${SizingSystem.media.desktop}) {
     justify-content: center;
@@ -48,6 +49,8 @@ const StyledPostInfos = styled.dl`
 `
 
 const StyledPostInfoLabel = styled.dt`
+  margin-right: ${SizingSystem.values.demi};
+
   &:not(:first-child) {
     margin-left: ${SizingSystem.values.base};
 
@@ -60,7 +63,7 @@ const StyledPostInfoLabel = styled.dt`
 `
 
 const StyledPostInfoValue = styled.dd`
-  margin-left: ${SizingSystem.values.demi};
+  margin-left: 0;
 `
 
 const StyledFooter = styled.footer`
@@ -69,6 +72,10 @@ const StyledFooter = styled.footer`
   color: ${ColorSystem.gray.g800};
   font-size: ${TypographySystem.sizes.defaultContent};
   text-align: center;
+
+  @media (min-width: ${SizingSystem.media.desktop}) {
+    margin-top: 9.6rem;
+  }
 `
 
 const StyledAuthor = styled.strong`
@@ -131,7 +138,7 @@ export default function Template({
       <SEO title={frontmatter.title} keywords={frontmatter.tags} />
       <StyledBlogpost>
         <StyledHeader>
-          <StyledPostTitle children={frontmatter.title} />
+          <PageTitle children={frontmatter.title} />
           <StyledPostInfos>
             <StyledPostInfoLabel children="Posted on" />
             <StyledPostInfoValue>

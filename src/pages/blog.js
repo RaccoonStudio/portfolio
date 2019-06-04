@@ -1,15 +1,54 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BlogPostAbstract from "../components/BlogPostAbstract"
+import PageTitle from "../components/PageTitle"
+import Button from "../components/Button"
+import { SizingSystem } from "../components/core"
 
-const Blog = () => (
-  <Layout>
-    <SEO title="Blog" />
-    <h1>Blog</h1>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const StyledMediumLink = styled(Button)`
+  margin-bottom: ${SizingSystem.values.base};
+`
 
-export default Blog
+const BlogPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges.map(edge => (
+    <BlogPostAbstract key={edge.node.id} post={edge.node} />
+  ))
+
+  return (
+    <Layout narrowContent>
+      <SEO title="Blog" />
+      <PageTitle children="Blog" />
+      {Posts}
+      <StyledMediumLink href="https://medium.com/@iamhiwelo">
+        Discover older posts on Medium
+      </StyledMediumLink>
+    </Layout>
+  )
+}
+
+export default BlogPage
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "dddd D MMMM YYYY")
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`

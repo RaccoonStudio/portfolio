@@ -102,6 +102,11 @@ module.exports = {
               `900`,
             ],
           },
+          {
+            family: `Playfair Display`,
+            subsets: [`latin`, `latin-ext`],
+            variants: [`400`, `700`, `900`],
+          },
         ],
       },
     },

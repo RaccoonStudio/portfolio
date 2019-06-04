@@ -7,15 +7,21 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 import Header from "../header"
 import Footer from "../footer"
 import SkipLinks from "../skip-links"
+import { ContainerSystem } from "../core"
 
 import "../icons"
 import "./layout.module.scss"
 
-const Layout = ({ children, mainClass }) => (
+const StyledMain = styled.main`
+  ${props => props.narrowContainer && ContainerSystem.narrow}
+`
+
+const Layout = ({ children, mainClass, narrowContent }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -42,9 +48,13 @@ const Layout = ({ children, mainClass }) => (
           siteTitle={data.site.siteMetadata.title}
           mainNavigation={data.site.siteMetadata.mainNavigation}
         />
-        <main id="main" className={mainClass || undefined}>
+        <StyledMain
+          id="main"
+          className={mainClass || undefined}
+          narrowContainer={narrowContent}
+        >
           {children}
-        </main>
+        </StyledMain>
         <Footer
           siteTitle={data.site.siteMetadata.title}
           networks={data.site.siteMetadata.footerNetworks}
@@ -56,6 +66,11 @@ const Layout = ({ children, mainClass }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  narrowContent: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  narrowContent: false,
 }
 
 export default Layout
