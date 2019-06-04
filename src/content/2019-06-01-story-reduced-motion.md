@@ -3,6 +3,7 @@ path: "/blog/reduced-motion"
 date: "2019-06-01"
 title: "A story of reduced motion"
 tags: ["accessibility", "reduced motion", "animations"]
+published: true
 ---
 
 In May 2017, [WebKit started communicating about prefers-reduced-motion](https://webkit.org/blog/7551/responsive-design-for-motion/), a new media query targeting users who activated the reduced motion mode on their device. The goal? To serve alternate animations that avoid triggering motion sickness for people with [vestibular disorders](http://simplyaccessible.com/article/balance-awareness/).

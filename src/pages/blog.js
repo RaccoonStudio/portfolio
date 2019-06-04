@@ -37,7 +37,10 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { published: { ne: false } } }
+    ) {
       edges {
         node {
           id
@@ -46,6 +49,7 @@ export const pageQuery = graphql`
             date(formatString: "dddd D MMMM YYYY")
             path
             title
+            published
           }
         }
       }
