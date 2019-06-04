@@ -104,6 +104,10 @@ const StyledContent = styled.div`
   font-size: ${TypographySystem.sizes.blogContent};
   line-height: ${TypographySystem.lineheight.comfortable};
 
+  & a::after {
+    content: none;
+  }
+
   & blockquote {
     margin-left: -1.8rem;
     padding-left: ${SizingSystem.values.medium};
