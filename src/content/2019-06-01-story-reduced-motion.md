@@ -82,6 +82,8 @@ Implementing a _motionless_ version of your animations is a bit like applying th
 
 But rather, the idea behind the **inclusive design principles** is to offer a similar experience to everyone regardless of their unique set of abilities and without triggering physical or psychological discomfort. Animations are an important part of the web experience, and we all deserve to get access to these. 🙂
 
+---
+
 ## References
 
 - [WebKit: Responsive Design for Motion](https://webkit.org/blog/7551/responsive-design-for-motion/)

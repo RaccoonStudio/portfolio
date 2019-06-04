@@ -9,7 +9,16 @@ import Button from "../components/Button"
 import { SizingSystem } from "../components/core"
 
 const StyledMediumLink = styled(Button)`
-  margin-bottom: ${SizingSystem.values.base};
+  margin-bottom: ${SizingSystem.values.wider};
+`
+
+const StyledHeader = styled.header`
+  margin: ${SizingSystem.values.extraLarge} 0;
+
+  @media (min-width: ${SizingSystem.media.laptop}) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 const BlogPage = ({
@@ -24,7 +33,9 @@ const BlogPage = ({
   return (
     <Layout narrowContent>
       <SEO title="Blog" />
-      <PageTitle children="Blog" />
+      <StyledHeader>
+        <PageTitle children="Blog" />
+      </StyledHeader>
       {Posts}
       <StyledMediumLink href="https://medium.com/@iamhiwelo">
         Discover older posts on Medium

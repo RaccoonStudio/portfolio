@@ -90,6 +90,7 @@ const StyledAuthorAvatar = styled(Img)`
   border: ${SizingSystem.values.demi} solid ${ColorSystem.brand.raccoonBlue};
   border-radius: 50%;
   box-sizing: content-box;
+  overflow: hidden;
 `
 
 const StyledBio = styled.p`
@@ -115,6 +116,15 @@ const StyledContent = styled.div`
       ${ColorSystem.brand.raccoonTurquoise};
     color: ${ColorSystem.gray.g900};
     font-style: italic;
+  }
+
+  & hr {
+    display: block;
+    height: ${SizingSystem.values.double};
+    margin: ${SizingSystem.values.wider} auto;
+    width: ${SizingSystem.values.wider};
+    background: ${ColorSystem.brand.raccoonTurquoise};
+    border: 0;
   }
 
   & img {
