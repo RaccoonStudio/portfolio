@@ -16,9 +16,10 @@ before_install:
   - npm config set "@fortawesome:registry" https://npm.fontawesome.com/
   - npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_KEY
 before_script:
-  - "npm i -g gatsby"
-  - "npm i"
+  - "yarn global add gatsby"
+  - "yarn global add gh-pages"
+  - "yarn install"
 script:
-  - "npm run test"
+  - "yarn test"
 after_success:
-  - "npm run deploy"
+  - "yarn deploy"
