@@ -62,14 +62,13 @@ const BlogPostAbstract = post => {
   return (
     <StyledArticle>
       <StyledTitle>
-        <StyledTitleLink to={postInfo.path} children={postInfo.title} />
+        <StyledTitleLink to={postInfo.path}>{postInfo.title}</StyledTitleLink>
       </StyledTitle>
-      <StyledTime children={postInfo.date} />
-      <StyledExcerpt children={postExcerpt} />
+      <StyledTime>{postInfo.date}</StyledTime>
+      <StyledExcerpt>{postExcerpt}</StyledExcerpt>
       <StyledReadMore
         to={postInfo.path}
-        children={`Continue reading ${postInfo.title}`}
-      />
+      >{`Continue reading ${postInfo.title}`}</StyledReadMore>
     </StyledArticle>
   )
 }
