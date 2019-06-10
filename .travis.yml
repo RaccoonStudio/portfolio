@@ -18,8 +18,26 @@ before_install:
 before_script:
   - "yarn global add gatsby"
   - "yarn global add gh-pages"
-  - "yarn install"
-script:
-  - "yarn test"
-after_success:
-  - "yarn deploy"
+stages:
+  - build
+  - tests
+  - name: deploy
+    if: branch = master
+jobs:
+  include: 
+    - stage: build
+      script:
+      - echo "Building the project…"
+      - yarn install
+      - echo "Done building."
+    - stage: tests
+      script: 
+      - echo "Running tests…"
+      - yarn lint
+      - yarn test
+      - echo "Done running tests."
+    - stage: deploy
+      script:
+      - echo "Deploying to GitHub Pages…"
+      - yarn deploy
+      - echo "Done deploying to GitHub Pages"
