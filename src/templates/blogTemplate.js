@@ -158,7 +158,7 @@ export default function Template({
             <StyledPostInfoValue>
               <time
                 pubdate="pubdate"
-                datetime={moment(frontmatter.date).format("YYYY-MM-DD")}
+                dateTime={moment(frontmatter.date).format("YYYY-MM-DD")}
                 children={frontmatter.date}
               />
             </StyledPostInfoValue>
