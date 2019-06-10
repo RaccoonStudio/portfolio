@@ -67,6 +67,11 @@ const Layout = ({ children, mainClass, narrowContent }) => (
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   narrowContent: PropTypes.bool,
+
+  /**
+   * Specify the main class to add on main markup
+   */
+  mainClass: PropTypes.string,
 }
 
 Layout.defaultProps = {
