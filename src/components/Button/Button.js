@@ -41,7 +41,11 @@ const StyledButton = styled.button`
 const Button = props => {
   const markup = props.href ? `a` : `button`
 
-  return <StyledButton as={markup} children={props.children} {...props} />
+  return (
+    <StyledButton as={markup} {...props}>
+      {props.children}
+    </StyledButton>
+  )
 }
 
 Button.propTypes = {
