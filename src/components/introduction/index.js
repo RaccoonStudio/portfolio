@@ -12,12 +12,12 @@ const Introduction = ({ componentId }) => (
   >
     <div className={Styles.introduction__container}>
       <p>
-        <strong>I'm a designer</strong> from France <span aria-hidden>🇫🇷</span>{" "}
-        spending my life between Amsterdam and Rotterdam in The Netherlands{" "}
-        <span aria-hidden>🇳🇱</span>.
+        <strong>I&apos;m a designer</strong> from France{" "}
+        <span aria-hidden>🇫🇷</span> spending my life between Amsterdam and
+        Rotterdam in The Netherlands <span aria-hidden>🇳🇱</span>.
       </p>
       <p>
-        I'm <strong>Design systems and Accessibility lead</strong> for{" "}
+        I&apos;m <strong>Design systems and Accessibility lead</strong> for{" "}
         <a
           href="https://castoredc.com"
           target="_blank"
