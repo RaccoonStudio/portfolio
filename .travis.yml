@@ -12,9 +12,10 @@ deploy:
   keep-history: true
   on:
     branch: master
+before_install:
+  - npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+  - npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_KEY
 before_script:
-  - "npm config set '@fortawesome:registry' https://npm.fontawesome.com/"
-  - "npm config set '//npm.fontawesome.com/:_authToken' $FONTAWESOME_KEY"
   - "npm i -g gatsby"
   - "npm i"
 script:
