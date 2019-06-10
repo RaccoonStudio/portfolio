@@ -22,9 +22,7 @@ const StyledPageTitle = styled.h1`
 `
 
 const PageTitle = props => (
-  <>
-    <StyledPageTitle children={props.children} {...props} />
-  </>
+  <StyledPageTitle {...props}>{props.children}</StyledPageTitle>
 )
 
 PageTitle.propTypes = {
