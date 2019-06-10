@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -13,7 +14,7 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-export default (file, alt, title) => {
+const Image = (file, alt, title) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "damiensenger.jpg" }) {
@@ -37,3 +38,22 @@ export default (file, alt, title) => {
     />
   )
 }
+
+Image.propTypes = {
+  /**
+   * Specify the file used by the component
+   */
+  file: PropTypes.string,
+
+  /**
+   * Specify the alt attribute of the picture element
+   */
+  alt: PropTypes.string,
+
+  /**
+   * Specify the title attribute of the picture element
+   */
+  title: PropTypes.string,
+}
+
+export default Image

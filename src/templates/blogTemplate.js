@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import moment from "moment"
 import Img from "gatsby-image"
@@ -152,18 +153,19 @@ export default function Template({
       <SEO title={frontmatter.title} keywords={frontmatter.tags} />
       <StyledBlogpost>
         <StyledHeader>
-          <PageTitle children={frontmatter.title} />
+          <PageTitle>{frontmatter.title}</PageTitle>
           <StyledPostInfos>
-            <StyledPostInfoLabel children="Posted on" />
+            <StyledPostInfoLabel>Posted on</StyledPostInfoLabel>
             <StyledPostInfoValue>
               <time
                 pubdate="pubdate"
-                datetime={moment(frontmatter.date).format("YYYY-MM-DD")}
-                children={frontmatter.date}
-              />
+                dateTime={moment(frontmatter.date).format("YYYY-MM-DD")}
+              >
+                {frontmatter.date}
+              </time>
             </StyledPostInfoValue>
-            <StyledPostInfoLabel children="Written by" />
-            <StyledPostInfoValue children="Damien Senger" />
+            <StyledPostInfoLabel>Written by</StyledPostInfoLabel>
+            <StyledPostInfoValue>Damien Senger</StyledPostInfoValue>
           </StyledPostInfos>
         </StyledHeader>
         <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
@@ -172,15 +174,21 @@ export default function Template({
             fixed={data.authorAvatar.childImageSharp.fixed}
             alt="Face portrait of Damien Senger looking directly at the camera."
           />
-          <StyledAuthor
-            id="authorName"
-            children={data.site.siteMetadata.blogAuthor}
-          />
-          <StyledBio children={data.site.siteMetadata.blogBio} />
+          <StyledAuthor id="authorName">
+            {data.site.siteMetadata.blogAuthor}
+          </StyledAuthor>
+          <StyledBio>{data.site.siteMetadata.blogBio}</StyledBio>
         </StyledFooter>
       </StyledBlogpost>
     </Layout>
   )
+}
+
+Template.propTypes = {
+  /**
+   * Specify the data used by the blogTemplate component
+   */
+  data: PropTypes.Object,
 }
 
 export const pageQuery = graphql`

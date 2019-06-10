@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogPostAbstract from "../components/BlogPostAbstract"
@@ -34,7 +35,7 @@ const BlogPage = ({
     <Layout narrowContent>
       <SEO title="Blog" />
       <StyledHeader>
-        <PageTitle children="Blog" />
+        <PageTitle>Blog</PageTitle>
       </StyledHeader>
       {Posts}
       <StyledMediumLink href="https://medium.com/@iamhiwelo">
@@ -42,6 +43,13 @@ const BlogPage = ({
       </StyledMediumLink>
     </Layout>
   )
+}
+
+BlogPage.propTypes = {
+  /**
+   * Specify the data used by the component
+   */
+  data: PropTypes.Object,
 }
 
 export default BlogPage
