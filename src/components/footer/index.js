@@ -31,7 +31,9 @@ const Footer = ({ siteTitle, networks, componentId }) => (
         </ul>
       </div>
       <div className={Styles.footer__storyContainer}>
-        <h2 className={Styles.footer__storyTitle}>Let's discuss together?</h2>
+        <h2 className={Styles.footer__storyTitle}>
+          Let&apos;s discuss together?
+        </h2>
         <p className={Styles.footer__story}>
           I love <em>rooibos tea</em>, <em>oat-milk latte</em>,{" "}
           <em lang="sv">kanelbullar</em> and discussing{" "}
@@ -40,7 +42,7 @@ const Footer = ({ siteTitle, networks, componentId }) => (
         <p className={Styles.footer__story}>
           So, whether you are <em>a conference or meetup organiser</em>,{" "}
           <em>a project maker</em> or just interested by my profile,{" "}
-          <em>let's have a chat!</em>
+          <em>let&apos;s have a chat!</em>
         </p>
         <p className={Styles.footer__contact}>
           <a
