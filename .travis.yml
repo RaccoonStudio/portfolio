@@ -22,6 +22,8 @@ before_script:
   - yarn global add gatsby
   - yarn install
   - echo "Done building."
+after_success:
+  - ./scripts/after_success.sh
 stages:
   - build
   - tests
@@ -38,6 +40,6 @@ jobs:
     - stage: deploy
       script:
       - echo "Deploying to GitHub Pages…"
-      - yarn global gh-pages
+      - yarn global add gh-pages
       - yarn deploy
       - echo "Done deploying to GitHub Pages"
