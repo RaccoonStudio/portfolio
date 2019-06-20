@@ -1,9 +1,12 @@
 {
   "extends": ["standard", "eslint:recommended", "plugin:react/recommended"],
-  "plugins": ["jsx-a11y"],
+  "plugins": ["jsx-a11y", "jest"],
   "settings": {
     "react": {
       "version": "detect"
     }
+  },
+  "env": {
+    "jest/globals": true
   }
 }
