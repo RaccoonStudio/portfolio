@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots PageTitle overview 1`] = `
+<h1
+  className="sc-bdVaJa iTWoZQ"
+>
+  Hello World!
+</h1>
+`;
