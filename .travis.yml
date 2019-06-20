@@ -18,28 +18,26 @@ before_install:
   - npm config set "@fortawesome:registry" https://npm.fontawesome.com/
   - npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_KEY
 before_script:
-  - echo "Building the project…"
-  - yarn global add gatsby
-  - yarn install
-  - echo "Done building."
+  - echo "Install the global requirements…"
+  - yarn global add gatsby gh-pages
+  - echo "Done installing."
 after_success:
   - ./scripts/after_success.sh
 stages:
   - build
-  - tests
   - name: deploy
     if: branch = master
 jobs:
   include: 
-    - stage: tests
-      script: 
-      - echo "Running tests…"
-      - yarn lint
-      - yarn test
-      - echo "Done running tests."
+    - stage: build
+      name: "Build the project"
+      script: yarn install
+    - name: "Launch Storybook"
+      script: yarn storybook
+    - name: "Code Quality"
+      script: yarn lint
+    - name: "Unit Tests"
+      script: yarn test
     - stage: deploy
-      script:
-      - echo "Deploying to GitHub Pages…"
-      - yarn global add gh-pages
-      - yarn deploy
-      - echo "Done deploying to GitHub Pages"
+      name: "Deploy the project"
+      script: yarn deploy
