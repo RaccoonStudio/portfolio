@@ -5,7 +5,7 @@ cache:
   yarn: true
   npm: true
   directories:
-  - node_modules
+    - node_modules
 deploy:
   provider: pages
   skip-cleanup: true
@@ -28,16 +28,16 @@ stages:
   - name: deploy
     if: branch = master
 jobs:
-  include: 
+  include:
     - stage: tests
-      script: 
-      - echo "Running tests…"
-      - yarn lint
-      - yarn test
-      - echo "Done running tests."
+      script:
+        - echo "Running tests…"
+        - yarn lint
+        - yarn test
+        - echo "Done running tests."
     - stage: deploy
       script:
-      - echo "Deploying to GitHub Pages…"
-      - yarn global gh-pages
-      - yarn deploy
-      - echo "Done deploying to GitHub Pages"
+        - echo "Deploying to GitHub Pages…"
+        - yarn global add gh-pages
+        - yarn deploy
+        - echo "Done deploying to GitHub Pages"
