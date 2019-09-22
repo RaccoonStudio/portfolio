@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
-import React from "react"
-import Styles from "./footer.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { CopyToClipboard } from "react-copy-to-clipboard"
-import raccoonLogo from "../../images/raccoon-logo-inverted.svg"
+import PropTypes from 'prop-types'
+import React from 'react'
+import Styles from './footer.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import raccoonLogo from '../../images/raccoon-logo-inverted.svg'
 
 const Footer = ({ siteTitle, networks, componentId }) => (
   <footer className={Styles.footer} id={componentId}>
@@ -24,7 +24,7 @@ const Footer = ({ siteTitle, networks, componentId }) => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={["fab", item.icon]} />
+                <FontAwesomeIcon icon={['fab', item.icon]} />
               </a>
             </li>
           ))}
@@ -35,13 +35,13 @@ const Footer = ({ siteTitle, networks, componentId }) => (
           Let&apos;s discuss together?
         </h2>
         <p className={Styles.footer__story}>
-          I love <em>rooibos tea</em>, <em>oat-milk latte</em>,{" "}
-          <em lang="sv">kanelbullar</em> and discussing{" "}
+          I love <em>rooibos tea</em>, <em>oat-milk latte</em>,{' '}
+          <em lang="sv">kanelbullar</em> and discussing{' '}
           <em>how to make the Web a better place</em>.
         </p>
         <p className={Styles.footer__story}>
-          So, whether you are <em>a conference or meetup organiser</em>,{" "}
-          <em>a project maker</em> or just interested by my profile,{" "}
+          So, whether you are <em>a conference or meetup organiser</em>,{' '}
+          <em>a project maker</em> or just interested by my profile,{' '}
           <em>let&apos;s have a chat!</em>
         </p>
         <p className={Styles.footer__contact}>
@@ -63,13 +63,13 @@ const Footer = ({ siteTitle, networks, componentId }) => (
 Footer.propTypes = {
   siteTitle: PropTypes.string,
   networks: PropTypes.array,
-  componentId: PropTypes.string,
+  componentId: PropTypes.string
 }
 
 Footer.defaultProps = {
-  siteTitle: "",
+  siteTitle: '',
   networks: null,
-  componentId: null,
+  componentId: null
 }
 
 export default Footer

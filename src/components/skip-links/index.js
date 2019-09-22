@@ -1,14 +1,14 @@
-import React from "react"
-import Styles from "./skiplinks.module.scss"
+import React from 'react'
+import Styles from './skiplinks.module.scss'
 
 const skipTo = e => {
   var destination = document.querySelector(
-    e.currentTarget.attributes["href"].value
+    e.currentTarget.attributes['href'].value
   )
 
-  destination.setAttribute("tabIndex", "-1")
-  destination.addEventListener("blur", () => {
-    destination.removeAttribute("tabIndex")
+  destination.setAttribute('tabIndex', '-1')
+  destination.addEventListener('blur', () => {
+    destination.removeAttribute('tabIndex')
   })
 
   e.preventDefault()

@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
-import { SizingSystem, TypographySystem } from "../core"
+import { SizingSystem, TypographySystem } from '../core'
 
 const StyledArticle = styled.article`
   margin-bottom: ${SizingSystem.values.wide};
@@ -77,7 +77,7 @@ BlogPostAbstract.propTypes = {
   /**
    * Specify the information about the post being displayed
    */
-  post: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired
 }
 
 export default BlogPostAbstract

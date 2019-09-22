@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -53,7 +53,7 @@ Image.propTypes = {
   /**
    * Specify the title attribute of the picture element
    */
-  title: PropTypes.string,
+  title: PropTypes.string
 }
 
 export default Image

@@ -1,21 +1,21 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Styles from "./navigation.module.scss"
-import uuid from "uuid/v1"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Styles from './navigation.module.scss'
+import uuid from 'uuid/v1'
 
 const isExternal = url => {
   return url.match(/^(?:f|ht)tps?:\/\//i)
 }
 
 let closeNavigation = button => {
-  button.removeAttribute("aria-expanded")
+  button.removeAttribute('aria-expanded')
 }
 
 let openNavigation = button => {
-  button.setAttribute("aria-expanded", true)
+  button.setAttribute('aria-expanded', true)
   document
-    .getElementById(button.attributes["aria-controls"].value)
+    .getElementById(button.attributes['aria-controls'].value)
     .children[0].focus()
 }
 
@@ -39,7 +39,7 @@ const Navigation = ({ mainNavigation, componentId }) => (
     <button
       className={Styles.navigation__button}
       aria-haspopup="true"
-      aria-controls={componentId + "__navigation"}
+      aria-controls={componentId + '__navigation'}
       onClick={triggerNavigation}
     >
       Menu
@@ -47,7 +47,7 @@ const Navigation = ({ mainNavigation, componentId }) => (
     <nav
       className={Styles.navigation}
       aria-label="Main navigation"
-      id={componentId + "__navigation"}
+      id={componentId + '__navigation'}
     >
       {mainNavigation.map((item, index) => (
         <React.Fragment key={index}>
@@ -78,12 +78,12 @@ const Navigation = ({ mainNavigation, componentId }) => (
 
 Navigation.propTypes = {
   mainNavigation: PropTypes.array,
-  componentId: PropTypes.string,
+  componentId: PropTypes.string
 }
 
 Navigation.defaultProps = {
   mainNavigation: null,
-  componentId: uuid(),
+  componentId: uuid()
 }
 
 export default Navigation

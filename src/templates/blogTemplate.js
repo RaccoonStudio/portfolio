@@ -1,18 +1,18 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
-import { graphql } from "gatsby"
-import moment from "moment"
-import Img from "gatsby-image"
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import moment from 'moment'
+import Img from 'gatsby-image'
 import {
   ColorSystem,
   ContainerSystem,
   SizingSystem,
-  TypographySystem,
-} from "../components/core"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PageTitle from "../components/PageTitle"
+  TypographySystem
+} from '../components/core'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import PageTitle from '../components/PageTitle'
 
 const StyledBlogpost = styled.article`
   ${ContainerSystem.narrow}
@@ -143,8 +143,8 @@ const StyledContent = styled.div`
   }
 `
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+export default function Template ({
+  data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
@@ -159,7 +159,7 @@ export default function Template({
             <StyledPostInfoValue>
               <time
                 pubdate="pubdate"
-                dateTime={moment(frontmatter.date).format("YYYY-MM-DD")}
+                dateTime={moment(frontmatter.date).format('YYYY-MM-DD')}
               >
                 {frontmatter.date}
               </time>
@@ -188,7 +188,7 @@ Template.propTypes = {
   /**
    * Specify the data used by the blogTemplate component
    */
-  data: PropTypes.Object,
+  data: PropTypes.Object
 }
 
 export const pageQuery = graphql`

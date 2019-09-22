@@ -5,17 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
-import { StaticQuery, graphql } from "gatsby"
-import Header from "../header"
-import Footer from "../footer"
-import SkipLinks from "../skip-links"
-import { ContainerSystem } from "../core"
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+import Header from '../header'
+import Footer from '../footer'
+import SkipLinks from '../skip-links'
+import { ContainerSystem } from '../core'
 
-import "../icons"
-import "./layout.module.scss"
+import '../icons'
+import './layout.module.scss'
 
 const StyledMain = styled.main`
   ${props => props.narrowContainer && ContainerSystem.narrow}
@@ -71,11 +71,11 @@ Layout.propTypes = {
   /**
    * Specify the main class to add on main markup
    */
-  mainClass: PropTypes.string,
+  mainClass: PropTypes.string
 }
 
 Layout.defaultProps = {
-  narrowContent: false,
+  narrowContent: false
 }
 
 export default Layout

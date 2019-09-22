@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
-import { AccessibilityHelpers, ColorSystem, SizingSystem } from "../core"
+import { AccessibilityHelpers, ColorSystem, SizingSystem } from '../core'
 
 const StyledButton = styled.button`
   ${AccessibilityHelpers.outline}
@@ -57,11 +57,11 @@ Button.propTypes = {
   /**
    * Specify the target of the button, and transform it as a link
    */
-  href: PropTypes.string,
+  href: PropTypes.string
 }
 
 Button.defaultProps = {
-  href: "",
+  href: ''
 }
 
 export default Button

@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
-import { SizingSystem, TypographySystem } from "../core"
+import { SizingSystem, TypographySystem } from '../core'
 
 const StyledPageTitle = styled.h1`
   margin-bottom: 0.3em;
@@ -29,7 +29,7 @@ PageTitle.propTypes = {
   /**
    * Specify the content of the title
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 PageTitle.defaultProps = {}
