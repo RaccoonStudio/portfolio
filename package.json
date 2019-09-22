@@ -13,6 +13,7 @@
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^4.1.19",
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.11.0",
     "gatsby-image": "^2.2.3",
     "gatsby-plugin-accessibilityjs": "^1.0.3",
@@ -22,6 +23,7 @@
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-sass": "^2.0.10",
     "gatsby-plugin-sharp": "^2.0.23",
+    "gatsby-plugin-styled-components": "^3.1.6",
     "gatsby-remark-autolink-headers": "^2.0.16",
     "gatsby-remark-embed-video": "^1.7.1",
     "gatsby-remark-external-links": "^0.0.4",
@@ -38,7 +40,7 @@
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "react-key-handler": "^1.2.0-beta.3",
-    "styled-components": "^4.2.1",
+    "styled-components": "^4.3.2",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
