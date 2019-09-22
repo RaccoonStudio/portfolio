@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import moment from 'moment';
 import Img from 'gatsby-image';
@@ -153,8 +152,8 @@ const Template = ({
           <StyledPostInfos>
             <StyledPostInfoLabel>Posted on</StyledPostInfoLabel>
             <StyledPostInfoValue>
-              {console.log(frontmatter.date)}
-              <time dateTime={moment(frontmatter.date).format('YYYY-MM-DD')}>{frontmatter.date}</time>
+              {console.log()}
+              <time dateTime={frontmatter.date}>{moment(frontmatter.date).format('dddd D MMMM YYYY')}</time>
             </StyledPostInfoValue>
             <StyledPostInfoLabel>Written by</StyledPostInfoLabel>
             <StyledPostInfoValue>Damien Senger</StyledPostInfoValue>
@@ -187,7 +186,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "dddd D MMMM YYYY")
+        date(formatString: "YYYY-MM-DD")
         path
         title
         tags
