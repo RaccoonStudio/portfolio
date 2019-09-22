@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{256:function(e,a,t){"use strict";t.r(a);var n=t(0),l=t.n(n),c=t(74),o=t(249),r=t(248);a.default=function(){return l.a.createElement(o.a,null,l.a.createElement(r.a,{title:"Talks"}),l.a.createElement("h1",null,"Talks"),l.a.createElement(c.a,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-talks-js-aa05985f0778aa97fb35.js.map
