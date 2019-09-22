@@ -1,8 +1,8 @@
 import React from 'react';
 
+import { Hero } from '../components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Hero from '../components/hero';
 import Introduction from '../components/introduction';
 import Specialties from '../components/specialties';
 import { graphql } from 'gatsby';
@@ -43,7 +43,10 @@ const IndexPage = context => (
       title="Web accessibility & Inclusive Design"
       keywords={[`design studio`, `accessibility`, `inclusive design`, `damien senger`]}
     />
-    <Hero salutations={context.data.site.siteMetadata.heroSalutations} heroImage={context.data.heroImage} />
+    <Hero
+      salutations={context.data.site.siteMetadata.heroSalutations}
+      heroImage={context.data.heroImage.childImageSharp.fixed}
+    />
     <Introduction />
     <Specialties content={contentSpecialties} />
   </Layout>
