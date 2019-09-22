@@ -7,56 +7,57 @@ module.exports = {
     blogBio: `I’m a queer designer in Rotterdam specialised in web accessibility fighting every day for a more inclusive web.`,
     mainNavigation: [
       {
-        label: "About me",
-        link: "/",
+        label: 'About me',
+        link: '/',
       },
       {
-        label: "Talks & Meetups",
-        link: "https://speaking.raccoon.studio/",
+        label: 'Talks & Meetups',
+        link: 'https://speaking.raccoon.studio/',
       },
       {
-        label: "Blog",
-        link: "/blog",
+        label: 'Blog',
+        link: '/blog',
       },
     ],
     heroSalutations: [
       {
-        content: "Hi!",
-        lang: "en",
+        content: 'Hi!',
+        lang: 'en',
       },
       {
-        content: "Hej!",
-        lang: "sv",
+        content: 'Hej!',
+        lang: 'sv',
       },
       {
-        content: "Bonjour !",
-        lang: "fr",
+        content: 'Bonjour !',
+        lang: 'fr',
       },
     ],
     footerNetworks: [
       {
-        icon: "twitter",
-        label: "Visit @iamhiwelo on Twitter",
-        target: "https://twitter.com/iamhiwelo",
+        icon: 'twitter',
+        label: 'Visit @iamhiwelo on Twitter',
+        target: 'https://twitter.com/iamhiwelo',
       },
       {
-        icon: "linkedin",
-        label: "Connect with me on Linkedin",
-        target: "https://linkedin.com/in/damiensenger/en",
+        icon: 'linkedin',
+        label: 'Connect with me on Linkedin',
+        target: 'https://linkedin.com/in/damiensenger/en',
       },
       {
-        icon: "dribbble",
-        label: "Discover my shots on Dribbble",
-        target: "https://dribbble.com/hiwelo",
+        icon: 'dribbble',
+        label: 'Discover my shots on Dribbble',
+        target: 'https://dribbble.com/hiwelo',
       },
       {
-        icon: "instagram",
-        label: "Take a look at my pictures on Instagram",
-        target: "https://instagram.com/hiwelo",
+        icon: 'instagram',
+        label: 'Take a look at my pictures on Instagram',
+        target: 'https://instagram.com/hiwelo',
       },
     ],
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -81,8 +82,8 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    "gatsby-plugin-offline",
-    "gatsby-plugin-sass",
+    'gatsby-plugin-offline',
+    'gatsby-plugin-sass',
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -90,17 +91,7 @@ module.exports = {
           {
             family: `Montserrat`,
             subsets: [`latin`, `latin-ext`],
-            variants: [
-              `100`,
-              `200`,
-              `300`,
-              `400`,
-              `500`,
-              `600`,
-              `700`,
-              `800`,
-              `900`,
-            ],
+            variants: [`100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`],
           },
           {
             family: `Playfair Display`,
@@ -114,14 +105,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/content`,
-        name: "markdown-pages",
+        name: 'markdown-pages',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/content`,
-        name: "markdown-pages",
+        name: 'markdown-pages',
       },
     },
     {
@@ -138,19 +129,19 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: "_blank",
-              rel: "noopener noreferrer",
+              target: '_blank',
+              rel: 'noopener noreferrer',
             },
           },
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               width: 640,
               ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+              related: false, // Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true, // Optional: Disable insertion of <style> border: 0
             },
           },
           {
@@ -163,7 +154,7 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: "language-",
+              classPrefix: 'language-',
               // This is used to allow setting a language for inline code
               // (i.e. single backticks) by creating a separator.
               // This separator is a string and will do no white-space
@@ -193,4 +184,4 @@ module.exports = {
       },
     },
   ],
-}
+};
