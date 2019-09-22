@@ -8,21 +8,25 @@ const Introduction = ({ componentId }) => (
   <section className={Styles.introduction} aria-label="Who am I in a nutshell?" id={componentId}>
     <div className={Styles.introduction__container}>
       <p>
-        <strong>I&apos;m a designer</strong> from France <span aria-hidden>🇫🇷</span> spending my life between Amsterdam
-        and Rotterdam in The Netherlands <span aria-hidden>🇳🇱</span>.
+        <strong>I&apos;m a designer who codes</strong> living and working in Rotterdam{' '}
+        <span aria-label="The Netherlands">🇳🇱&nbsp;</span>. Originally from Strasbourg{' '}
+        <span aria-label="France">🇫🇷</span>, I enjoyed working with brands, conferences and projects on both side of the
+        Atlantic Ocean.
       </p>
       <p>
-        I&apos;m <strong>Design systems and Accessibility lead</strong> for{' '}
+        As <strong>Design systems and Accessibility lead</strong> for{' '}
         <a href="https://castoredc.com" target="_blank" rel="noopener noreferrer">
-          Castor&nbsp;EDC
+          Castor
         </a>{' '}
-        where I collaborate with Product and Engineering teams to bring more <strong>consistency</strong>,{' '}
-        <strong>usability</strong> and <strong>accessibility</strong> in our products.
+        in Amsterdam, I collaborate daily with Product and Engineering teams to build a design system and its team
+        bringing more <strong>consistency</strong>, <strong>usability</strong> and <strong>accessibility</strong> in our
+        products.
       </p>
       <p>
-        My background includes <strong>experiences as UX and UI designer</strong> and{' '}
-        <strong>several years as a web developer</strong>. This is helping me to be a <strong>strong bridge</strong>{' '}
-        between ideation and implementation and to mentor engineers to develop inclusivity through their code.
+        In the last <strong>10 years</strong>, I helped projects and teams in France, Germany, The Netherlands, Sweden
+        and in the United States to <strong>be more accessible</strong> and/or to{' '}
+        <strong>develop their design systems</strong>. With experiences both in design and front-end engineering, I am a{' '}
+        <strong>strong bridge between ideation and implementation</strong>.
       </p>
     </div>
   </section>
