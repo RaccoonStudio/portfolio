@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{257:function(e,t,a){"use strict";a.r(t);var n=a(0),o=a.n(n),r=a(74),c=a(249),l=a(248);t.default=function(){return o.a.createElement(c.a,null,o.a.createElement(l.a,{title:"Workshops"}),o.a.createElement("h1",null,"Workshops"),o.a.createElement(r.a,{to:"/"},"Go back to the homepage"))}}}]);
-//# sourceMappingURL=component---src-pages-workshops-js-787a68f06e2d23423dfc.js.map
