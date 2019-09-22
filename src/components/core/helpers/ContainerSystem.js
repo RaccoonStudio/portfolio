@@ -1,8 +1,8 @@
-import { css } from 'styled-components'
-import ColorSystem from './ColorSystem'
-import SizingSystem from './SizingSystem'
+import { css } from 'styled-components';
+import ColorSystem from './ColorSystem';
+import SizingSystem from './SizingSystem';
 
-const ContainerSystem = {}
+const ContainerSystem = {};
 
 ContainerSystem.default = css`
   display: flex;
@@ -20,7 +20,7 @@ ContainerSystem.default = css`
   @media (min-width: ${SizingSystem.media.desktop}) {
     width: 1280px;
   }
-`
+`;
 
 ContainerSystem.narrow = css`
   ${ContainerSystem.default};
@@ -35,6 +35,6 @@ ContainerSystem.narrow = css`
     padding-left: 160px;
     padding-right: 160px;
   }
-`
+`;
 
-export default ContainerSystem
+export default ContainerSystem;

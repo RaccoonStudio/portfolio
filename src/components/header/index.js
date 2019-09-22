@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import Styles from './header.module.scss'
-import Navigation from '../navigation'
-import raccoonLogo from '../../images/raccoon-logo-inverted.svg'
+import PropTypes from 'prop-types';
+import React from 'react';
+import Styles from './header.module.scss';
+import Navigation from '../navigation';
+import raccoonLogo from '../../images/raccoon-logo-inverted.svg';
 
 const Header = ({ siteTitle, mainNavigation }) => (
   <header className={Styles.header}>
@@ -13,16 +13,16 @@ const Header = ({ siteTitle, mainNavigation }) => (
       <Navigation mainNavigation={mainNavigation} />
     </div>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  mainNavigation: PropTypes.array
-}
+  mainNavigation: PropTypes.array,
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-  mainNavigation: null
-}
+  mainNavigation: null,
+};
 
-export default Header
+export default Header;

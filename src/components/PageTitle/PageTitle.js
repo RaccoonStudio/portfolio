@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import { SizingSystem, TypographySystem } from '../core'
+import { SizingSystem, TypographySystem } from '../core';
 
 const StyledPageTitle = styled.h1`
   margin-bottom: 0.3em;
@@ -19,19 +19,17 @@ const StyledPageTitle = styled.h1`
     font-size: 4.8rem;
     font-weight: ${TypographySystem.weights.hairstyle};
   }
-`
+`;
 
-const PageTitle = props => (
-  <StyledPageTitle {...props}>{props.children}</StyledPageTitle>
-)
+const PageTitle = props => <StyledPageTitle {...props}>{props.children}</StyledPageTitle>;
 
 PageTitle.propTypes = {
   /**
    * Specify the content of the title
    */
-  children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};
 
-PageTitle.defaultProps = {}
+PageTitle.defaultProps = {};
 
-export default PageTitle
+export default PageTitle;

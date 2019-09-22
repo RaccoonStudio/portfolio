@@ -1,3 +1,3 @@
-import BlogPostAbstract from './BlogPostAbstract'
+import BlogPostAbstract from './BlogPostAbstract';
 
-export default BlogPostAbstract
+export default BlogPostAbstract;

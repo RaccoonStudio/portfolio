@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Projects = () => (
   <Layout>
@@ -10,6 +10,6 @@ const Projects = () => (
     <h1>Projects</h1>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
-)
+);
 
-export default Projects
+export default Projects;

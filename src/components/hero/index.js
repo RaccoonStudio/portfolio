@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Styles from './hero.module.scss'
-import Img from 'gatsby-image'
-import uuid from 'uuid/v1'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Styles from './hero.module.scss';
+import Img from 'gatsby-image';
+import uuid from 'uuid/v1';
 
 const Hero = ({ salutations, heroImage, componentId }) => (
   <>
@@ -17,8 +17,8 @@ const Hero = ({ salutations, heroImage, componentId }) => (
             ))}
           </span>
           <span id={`${componentId}_title`}>
-            I am <strong>Damien</strong>, digital <strong>designer</strong>{' '}
-            specialised in <strong>accessibility</strong>.
+            I am <strong>Damien</strong>, digital <strong>designer</strong> specialised in{' '}
+            <strong>accessibility</strong>.
           </span>
         </h1>
       </div>
@@ -30,18 +30,18 @@ const Hero = ({ salutations, heroImage, componentId }) => (
       />
     </div>
   </>
-)
+);
 
 Hero.propTypes = {
   salutations: PropTypes.array,
   heroImage: PropTypes.object,
-  componentId: PropTypes.string
-}
+  componentId: PropTypes.string,
+};
 
 Hero.defaultProps = {
   salutations: null,
   heroImage: null,
-  componentId: uuid()
-}
+  componentId: uuid(),
+};
 
-export default Hero
+export default Hero;

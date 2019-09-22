@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -27,17 +27,10 @@ const Image = (file, alt, title) => {
         }
       }
     }
-  `)
+  `);
 
-  return (
-    <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
-      alt={alt}
-      title={title}
-      aria-current
-    />
-  )
-}
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt={alt} title={title} aria-current />;
+};
 
 Image.propTypes = {
   /**
@@ -53,7 +46,7 @@ Image.propTypes = {
   /**
    * Specify the title attribute of the picture element
    */
-  title: PropTypes.string
-}
+  title: PropTypes.string,
+};
 
-export default Image
+export default Image;

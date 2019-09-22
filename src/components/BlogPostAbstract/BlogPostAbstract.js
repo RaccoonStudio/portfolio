@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import { SizingSystem, TypographySystem } from '../core'
+import { SizingSystem, TypographySystem } from '../core';
 
 const StyledArticle = styled.article`
   margin-bottom: ${SizingSystem.values.wide};
@@ -17,17 +17,17 @@ const StyledArticle = styled.article`
       margin-right: ${SizingSystem.values.wider};
     }
   }
-`
+`;
 
-const StyledTitleLink = styled(Link)``
+const StyledTitleLink = styled(Link)``;
 
 const StyledTitle = styled.h2`
   margin-top: 0;
   font-family: ${TypographySystem.stack.titleStack};
   font-size: 3.2rem;
-`
+`;
 
-const StyledExcerpt = styled.p``
+const StyledExcerpt = styled.p``;
 
 const StyledTime = styled.time`
   float: left;
@@ -36,10 +36,10 @@ const StyledTime = styled.time`
   &::after {
     display: inline-block;
     margin: 0 ${SizingSystem.values.demi};
-    content: "•";
+    content: '•';
     font-weight: ${TypographySystem.weights.default};
   }
-`
+`;
 
 const StyledReadMore = styled(Link)`
   &::after {
@@ -47,17 +47,17 @@ const StyledReadMore = styled(Link)`
     height: ${SizingSystem.values.demi};
     margin-left: ${SizingSystem.values.demi};
     width: ${SizingSystem.values.demi};
-    content: "";
+    content: '';
     border-bottom: ${SizingSystem.values.double} solid currentColor;
     border-right: ${SizingSystem.values.double} solid currentColor;
     transform: rotate(-45deg);
     vertical-align: middle;
   }
-`
+`;
 
 const BlogPostAbstract = post => {
-  const postInfo = post.post.frontmatter
-  const postExcerpt = post.post.excerpt
+  const postInfo = post.post.frontmatter;
+  const postExcerpt = post.post.excerpt;
 
   return (
     <StyledArticle>
@@ -66,18 +66,16 @@ const BlogPostAbstract = post => {
       </StyledTitle>
       <StyledTime>{postInfo.date}</StyledTime>
       <StyledExcerpt>{postExcerpt}</StyledExcerpt>
-      <StyledReadMore
-        to={postInfo.path}
-      >{`Continue reading ${postInfo.title}`}</StyledReadMore>
+      <StyledReadMore to={postInfo.path}>{`Continue reading ${postInfo.title}`}</StyledReadMore>
     </StyledArticle>
-  )
-}
+  );
+};
 
 BlogPostAbstract.propTypes = {
   /**
    * Specify the information about the post being displayed
    */
-  post: PropTypes.object.isRequired
-}
+  post: PropTypes.object.isRequired,
+};
 
-export default BlogPostAbstract
+export default BlogPostAbstract;

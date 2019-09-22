@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import BlogPostAbstract from '../components/BlogPostAbstract'
-import PageTitle from '../components/PageTitle'
-import Button from '../components/Button'
-import { SizingSystem } from '../components/core'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import BlogPostAbstract from '../components/BlogPostAbstract';
+import PageTitle from '../components/PageTitle';
+import Button from '../components/Button';
+import { SizingSystem } from '../components/core';
 
 const StyledMediumLink = styled(Button)`
   margin-bottom: ${SizingSystem.values.wider};
-`
+`;
 
 const StyledHeader = styled.header`
   margin: ${SizingSystem.values.extraLarge} 0;
@@ -20,16 +20,14 @@ const StyledHeader = styled.header`
     margin-left: auto;
     margin-right: auto;
   }
-`
+`;
 
 const BlogPage = ({
   data: {
-    allMarkdownRemark: { edges }
-  }
+    allMarkdownRemark: { edges },
+  },
 }) => {
-  const Posts = edges.map(edge => (
-    <BlogPostAbstract key={edge.node.id} post={edge.node} />
-  ))
+  const Posts = edges.map(edge => <BlogPostAbstract key={edge.node.id} post={edge.node} />);
 
   return (
     <Layout narrowContent>
@@ -38,21 +36,19 @@ const BlogPage = ({
         <PageTitle>Blog</PageTitle>
       </StyledHeader>
       {Posts}
-      <StyledMediumLink href="https://medium.com/@iamhiwelo">
-        Discover older posts on Medium
-      </StyledMediumLink>
+      <StyledMediumLink href="https://medium.com/@iamhiwelo">Discover older posts on Medium</StyledMediumLink>
     </Layout>
-  )
-}
+  );
+};
 
 BlogPage.propTypes = {
   /**
    * Specify the data used by the component
    */
-  data: PropTypes.Object
-}
+  data: PropTypes.Object,
+};
 
-export default BlogPage
+export default BlogPage;
 
 export const pageQuery = graphql`
   query {
@@ -74,4 +70,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

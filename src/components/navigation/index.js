@@ -1,38 +1,36 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import React from 'react'
-import Styles from './navigation.module.scss'
-import uuid from 'uuid/v1'
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Styles from './navigation.module.scss';
+import uuid from 'uuid/v1';
 
 const isExternal = url => {
-  return url.match(/^(?:f|ht)tps?:\/\//i)
-}
+  return url.match(/^(?:f|ht)tps?:\/\//i);
+};
 
-let closeNavigation = button => {
-  button.removeAttribute('aria-expanded')
-}
+const closeNavigation = button => {
+  button.removeAttribute('aria-expanded');
+};
 
-let openNavigation = button => {
-  button.setAttribute('aria-expanded', true)
-  document
-    .getElementById(button.attributes['aria-controls'].value)
-    .children[0].focus()
-}
+const openNavigation = button => {
+  button.setAttribute('aria-expanded', true);
+  document.getElementById(button.attributes['aria-controls'].value).children[0].focus();
+};
 
-let triggerNavigation = e => {
-  let button = e.currentTarget
+const triggerNavigation = e => {
+  const button = e.currentTarget;
 
   // eslint-disable-next-line
   switch (button.hasAttribute("aria-expanded")) {
     case true:
-      closeNavigation(button)
-      break
+      closeNavigation(button);
+      break;
 
     case false:
-      openNavigation(button)
-      break
+      openNavigation(button);
+      break;
   }
-}
+};
 
 const Navigation = ({ mainNavigation, componentId }) => (
   <>
@@ -44,29 +42,16 @@ const Navigation = ({ mainNavigation, componentId }) => (
     >
       Menu
     </button>
-    <nav
-      className={Styles.navigation}
-      aria-label="Main navigation"
-      id={componentId + '__navigation'}
-    >
+    <nav className={Styles.navigation} aria-label="Main navigation" id={componentId + '__navigation'}>
       {mainNavigation.map((item, index) => (
         <React.Fragment key={index}>
           {isExternal(item.link) && (
-            <a
-              className={`${componentId}__navItem`}
-              href={item.link}
-              target="_blaink"
-              rel="noopener noreferrer"
-            >
+            <a className={`${componentId}__navItem`} href={item.link} target="_blaink" rel="noopener noreferrer">
               {item.label}
             </a>
           )}
           {!isExternal(item.link) && (
-            <Link
-              className={`${componentId}__navItem`}
-              to={item.link}
-              key={index}
-            >
+            <Link className={`${componentId}__navItem`} to={item.link} key={index}>
               {item.label}
             </Link>
           )}
@@ -74,16 +59,16 @@ const Navigation = ({ mainNavigation, componentId }) => (
       ))}
     </nav>
   </>
-)
+);
 
 Navigation.propTypes = {
   mainNavigation: PropTypes.array,
-  componentId: PropTypes.string
-}
+  componentId: PropTypes.string,
+};
 
 Navigation.defaultProps = {
   mainNavigation: null,
-  componentId: uuid()
-}
+  componentId: uuid(),
+};
 
-export default Navigation
+export default Navigation;

@@ -1,8 +1,8 @@
-import { css } from 'styled-components'
-import ColorSystem from './ColorSystem'
-import SizingSystem from './SizingSystem'
+import { css } from 'styled-components';
+import ColorSystem from './ColorSystem';
+import SizingSystem from './SizingSystem';
 
-const AccessibilityHelpers = {}
+const AccessibilityHelpers = {};
 
 AccessibilityHelpers.outline = css`
   &:active,
@@ -10,7 +10,7 @@ AccessibilityHelpers.outline = css`
     outline: 0.2rem dashed ${ColorSystem.brand.raccoon};
     outline-offset: ${SizingSystem.values.demi};
   }
-`
+`;
 
 AccessibilityHelpers.outlineInverted = css`
   &:active,
@@ -18,7 +18,7 @@ AccessibilityHelpers.outlineInverted = css`
     outline: 0.2rem dashed ${ColorSystem.semantic.inverted};
     outline-offset: ${SizingSystem.values.demi};
   }
-`
+`;
 
 AccessibilityHelpers.srOnly = css`
   position: absolute;
@@ -29,7 +29,7 @@ AccessibilityHelpers.srOnly = css`
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
   white-space: nowrap;
-`
+`;
 
 AccessibilityHelpers.srOnlyFocusable = css`
   ${AccessibilityHelpers.outlineInverted};
@@ -53,6 +53,6 @@ AccessibilityHelpers.srOnlyFocusable = css`
     white-space: normal;
     z-index: 50;
   }
-`
+`;
 
-export default AccessibilityHelpers
+export default AccessibilityHelpers;

@@ -1,9 +1,9 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import PropTypes from 'prop-types'
-import uuid from 'uuid/v1'
+import { Link } from 'gatsby';
+import React from 'react';
+import PropTypes from 'prop-types';
+import uuid from 'uuid/v1';
 
-import Styles from './specialties.module.scss'
+import Styles from './specialties.module.scss';
 
 const Specialties = ({ content, componentId }) => (
   <section className={Styles.specialties} id={componentId}>
@@ -25,16 +25,16 @@ const Specialties = ({ content, componentId }) => (
       ))}
     </ul>
   </section>
-)
+);
 
 Specialties.propTypes = {
   content: PropTypes.array,
-  componentId: PropTypes.string
-}
+  componentId: PropTypes.string,
+};
 
 Specialties.defaultProps = {
   content: null,
-  componentId: uuid()
-}
+  componentId: uuid(),
+};
 
-export default Specialties
+export default Specialties;

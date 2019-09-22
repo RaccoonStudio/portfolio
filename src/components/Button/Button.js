@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import { AccessibilityHelpers, ColorSystem, SizingSystem } from '../core'
+import { AccessibilityHelpers, ColorSystem, SizingSystem } from '../core';
 
 const StyledButton = styled.button`
   ${AccessibilityHelpers.outline}
@@ -10,8 +10,8 @@ const StyledButton = styled.button`
   align-content: center;
   align-self: center;
   margin-top: auto;
-  padding: ${SizingSystem.values.base} ${SizingSystem.values.small}
-    ${SizingSystem.values.base} ${SizingSystem.values.medium};
+  padding: ${SizingSystem.values.base} ${SizingSystem.values.small} ${SizingSystem.values.base}
+    ${SizingSystem.values.medium};
   background-color: transparent;
   border: ${SizingSystem.values.double} solid currentColor;
   color: ${ColorSystem.brand.raccoon};
@@ -36,17 +36,17 @@ const StyledButton = styled.button`
     fill: currentColor;
     transition: fill 0.2s ease-in-out;
   }
-`
+`;
 
 const Button = props => {
-  const markup = props.href ? `a` : `button`
+  const markup = props.href ? `a` : `button`;
 
   return (
     <StyledButton as={markup} {...props}>
       {props.children}
     </StyledButton>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   /**
@@ -57,11 +57,11 @@ Button.propTypes = {
   /**
    * Specify the target of the button, and transform it as a link
    */
-  href: PropTypes.string
-}
+  href: PropTypes.string,
+};
 
 Button.defaultProps = {
-  href: ''
-}
+  href: '',
+};
 
-export default Button
+export default Button;

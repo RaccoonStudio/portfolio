@@ -1,19 +1,17 @@
-import React from 'react'
-import Styles from './skiplinks.module.scss'
+import React from 'react';
+import Styles from './skiplinks.module.scss';
 
 const skipTo = e => {
-  var destination = document.querySelector(
-    e.currentTarget.attributes['href'].value
-  )
+  const destination = document.querySelector(e.currentTarget.attributes['href'].value);
 
-  destination.setAttribute('tabIndex', '-1')
+  destination.setAttribute('tabIndex', '-1');
   destination.addEventListener('blur', () => {
-    destination.removeAttribute('tabIndex')
-  })
+    destination.removeAttribute('tabIndex');
+  });
 
-  e.preventDefault()
-  destination.focus()
-}
+  e.preventDefault();
+  destination.focus();
+};
 
 const SkipLinks = () => (
   <div className={Styles.SkipLinks}>
@@ -21,10 +19,10 @@ const SkipLinks = () => (
       Skip to content
     </a>
   </div>
-)
+);
 
-SkipLinks.propTypes = {}
+SkipLinks.propTypes = {};
 
-SkipLinks.defaultProps = {}
+SkipLinks.defaultProps = {};
 
-export default SkipLinks
+export default SkipLinks;
