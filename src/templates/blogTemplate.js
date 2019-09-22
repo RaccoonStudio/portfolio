@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -137,11 +138,12 @@ const StyledContent = styled.div`
   }
 `;
 
-export default function Template({
+const Template = ({
   data, // this prop will be injected by the GraphQL query below.
-}) {
+}) => {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
+
   return (
     <Layout mainClass="blog">
       <SEO title={frontmatter.title} keywords={frontmatter.tags} />
@@ -151,9 +153,8 @@ export default function Template({
           <StyledPostInfos>
             <StyledPostInfoLabel>Posted on</StyledPostInfoLabel>
             <StyledPostInfoValue>
-              <time pubdate="pubdate" dateTime={moment(frontmatter.date).format('YYYY-MM-DD')}>
-                {frontmatter.date}
-              </time>
+              {console.log(frontmatter.date)}
+              <time dateTime={moment(frontmatter.date).format('YYYY-MM-DD')}>{frontmatter.date}</time>
             </StyledPostInfoValue>
             <StyledPostInfoLabel>Written by</StyledPostInfoLabel>
             <StyledPostInfoValue>Damien Senger</StyledPostInfoValue>
@@ -171,14 +172,9 @@ export default function Template({
       </StyledBlogpost>
     </Layout>
   );
-}
-
-Template.propTypes = {
-  /**
-   * Specify the data used by the blogTemplate component
-   */
-  data: PropTypes.Object,
 };
+
+export default Template;
 
 export const pageQuery = graphql`
   query($path: String!) {

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -39,13 +40,6 @@ const BlogPage = ({
       <StyledMediumLink href="https://medium.com/@iamhiwelo">Discover older posts on Medium</StyledMediumLink>
     </Layout>
   );
-};
-
-BlogPage.propTypes = {
-  /**
-   * Specify the data used by the component
-   */
-  data: PropTypes.Object,
 };
 
 export default BlogPage;
