@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         label: 'Blog',
-        link: '/blog',
+        link: 'https://blog.raccoon.studio/',
       },
     ],
     heroSalutations: [
