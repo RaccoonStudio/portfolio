@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-pro": "^5.7.2",
-    "@typescript-eslint/eslint-plugin": "^2.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
     "@typescript-eslint/parser": "^2.3.0",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.3.0",
