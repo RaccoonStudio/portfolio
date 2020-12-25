@@ -14,7 +14,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^4.1.19",
     "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.11.0",
+    "gatsby": "^2.29.2",
     "gatsby-image": "^2.2.3",
     "gatsby-plugin-accessibilityjs": "^1.0.3",
     "gatsby-plugin-manifest": "^2.2.0",
